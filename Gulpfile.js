@@ -41,9 +41,13 @@ var paths = {
 			'bower_components/underscore/underscore.js',
 			'bower_components/backbone/backbone.js',
 			'bower_components/requirejs-text/text.js',
-			'bower_components/requirejs-plugins/src/json.js'
+			'bower_components/requirejs-plugins/src/json.js',
+			'bower_components/c3/c3.js',
+			'bower_components/d3/d3.js'
 		],
-		libsCss: 	[],
+		libsCss: 	[
+			'bower_components/c3/c3.css'
+		],
 		fonts: 		[],
 		html: 		[
 						'index.html',
@@ -53,7 +57,10 @@ var paths = {
 		images: 	[
 						'images/**/{,*/}*'
 					],
-		content: 	[],
+		content: 	[
+			'data/**/{,*/}*.csv',
+			'data/**/{,*/}*.json'
+		],
 		extras: 	[
 						'.htaccess',
 						'robot.txt',
@@ -111,14 +118,13 @@ gulp.task('imagemin', function() {
 
 gulp.task('styles', function() {
 	'use strict';
-	gutils.log(paths.libsCss.length);
 	if (!paths.libsCss.length) {
 		warn('Css files skiped because of empty paths');
 		return;
 	}
 	gulp.src(paths.libsCss, {cwd: bases.app})
 		.pipe(concat('libraries.css'))
-		.pipe(gulp.dest(bases.dist + 'styles/'))
+		.pipe(gulp.dest(bases.dist + 'css/'))
 		.pipe(reload({stream: true}));
 });
 
@@ -190,6 +196,7 @@ gulp.task('watch', ['build'], function() {
 	gulp.watch(bases.app + 'favicon.ico', 						['copyExtras']);
 	gulp.watch(bases.app + 'images/**/{,*/}*',		 			['imagemin']);
 	gulp.watch(bases.app + 'bower_components/**/{,*/}*.css', 	['styles']);
+	gulp.watch(bases.app + 'stylus/**/{,*/}*.styl',			 	['stylus']);
 	gulp.watch(bases.app + 'jsx/**/{,*/}*',						['react']);
 });
 

@@ -32,6 +32,7 @@
     "requirejs": "~2.1.18",
     "requirejs-plugins": "~1.0.3",
     "requirejs-text": "~2.0.14",
-    "react": "~0.13.3"
+    "react": "~0.13.3",
+    "c3": "~0.4.10"
   }
 }
