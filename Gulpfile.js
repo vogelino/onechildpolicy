@@ -2,6 +2,7 @@ var
 	gulp = require('gulp'),
 	clean = require('gulp-clean'),
 	jshint = require('gulp-jshint'),
+	jsxcs = require('gulp-jsxcs'),
 	concat = require('gulp-concat'),
 	imagemin = require('gulp-imagemin'),
 	stylus = require('gulp-stylus'),
@@ -34,8 +35,11 @@ var paths = {
 		jsx: 		['jsx/**/{,*/}*.jsx'],
 		stylus: 	['stylus/main.styl'],
 		libsJs: 	[
+			'bower_components/requirejs/require.js',
 			'bower_components/jquery/dist/jquery.js',
+			'bower_components/react/react.js',
 			'bower_components/underscore/underscore.js',
+			'bower_components/backbone/backbone.js',
 			'bower_components/requirejs-text/text.js',
 			'bower_components/requirejs-plugins/src/json.js'
 		],
@@ -57,6 +61,16 @@ var paths = {
 					]
 	};
 
+function throwError(err) {
+	'use strict';
+	gutils.log(gutils.colors.red(err));
+}
+
+function warn(msg) {
+	'use strict';
+	gutils.log(gutils.colors.yellow(msg));
+}
+
 gulp.task('clean', function() {
 	'use strict';
 	return gulp.src(bases.dist)
@@ -66,16 +80,12 @@ gulp.task('clean', function() {
 gulp.task('scripts', function() {
 	'use strict';
 	if (!paths.scripts.length) {
-		gutils.log(gutils.colors.yellow(
-			'Js files skiped because of empty paths'
-		));
+		warn('Js files skiped because of empty paths');
 		return;
 	}
 	gulp.src(paths.scripts, {cwd: bases.app})
 		.pipe(jshint())
-		.on('error', function(err) {
-			gutils.log(gutils.colors.red(err));
-		})
+		.on('error', throwError)
 		.pipe(jshint.reporter('default'))
 		.pipe(gulp.dest(bases.dist + 'scripts/'));
 });
@@ -83,30 +93,27 @@ gulp.task('scripts', function() {
 gulp.task('react', function () {
 	'use strict';
 	gulp.src(paths.jsx, {cwd: bases.app})
+	.pipe(jsxcs())
+	.on('error', throwError)
 	.pipe(react())
+	.on('error', throwError)
 	.pipe(gulp.dest(bases.dist + 'scripts/'))
-	.pipe(reload({stream: true}))
-	.on('error', function(err) {
-		gutils.log(gutils.colors.red(err));
-	});
+	.pipe(reload({stream: true}));
 });
 
 gulp.task('imagemin', function() {
 	'use strict';
 	gulp.src(paths.images, {cwd: bases.app})
 		.pipe(imagemin())
-		.on('error', function(err) {
-			gutils.log(gutils.colors.red(err));
-		})
+		.on('error', throwError)
 		.pipe(gulp.dest(bases.dist + 'content/images/'));
 });
 
 gulp.task('styles', function() {
 	'use strict';
+	gutils.log(paths.libsCss.length);
 	if (!paths.libsCss.length) {
-		gutils.log(gutils.colors.yellow(
-			'Css files skiped because of empty paths'
-		));
+		warn('Css files skiped because of empty paths');
 		return;
 	}
 	gulp.src(paths.libsCss, {cwd: bases.app})
@@ -121,9 +128,7 @@ gulp.task('stylus', function () {
 	.pipe(stylus({use: [nib(), normalize()]}))
 	.pipe(gulp.dest(bases.dist + 'css/'))
 	.pipe(reload({stream: true}))
-	.on('error', function(err) {
-		gutils.log(gutils.colors.red(err));
-	});
+	.on('error', throwError);
 });
 
 gulp.task('fonts', function() {
@@ -143,9 +148,7 @@ gulp.task('copyJsLibs', function() {
 	'use strict';
 	// Copy lib scripts, maintaining the original directory structure
 	if (!paths.libsJs.length) {
-		gutils.log(gutils.colors.yellow(
-			'Js libs files skiped because of empty paths'
-		));
+		warn('Js libs files skiped because of empty paths');
 		return;
 	}
 	gulp.src(paths.libsJs, {cwd: bases.app + '**'})
@@ -169,9 +172,7 @@ gulp.task('copyExtras', function() {
 gulp.task('copy', function() {
 	'use strict';
 	gulp.start('copyHtml', 'copyJsLibs', 'copyContents', 'copyExtras')
-	.on('error', function(err) {
-		gutils.log(gutils.colors.red(err));
-	});
+	.on('error', throwError);
 });
 
 gulp.task('watch', ['build'], function() {

@@ -1,9 +1,10 @@
 {
+	"esprima" : "esprima-fb",
 	"preset": "google",
 	"requireSpaceAfterLineComment": true,
 	"validateIndentation": "\t",
 	"disallowMixedSpacesAndTabs": "smart",
-	"disallowMultipleLineBreaks": false,
+	"disallowMultipleLineBreaks": true,
 	"disallowSpaceAfterKeywords": [
 		"function"
 	]
