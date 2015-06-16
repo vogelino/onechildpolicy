@@ -1,7 +1,7 @@
 {
-  "name": "VogelinoWebsite",
-  "description": "The webapp of Lucas Vogel [aka] vogelino",
-  "version": "2.0.0",
+  "name": "onechildpolicy",
+  "description": "Study project about the effects of the one child policy in china. Created by Lucas Vogel (vogelino) within the course \"Introduction to data vizualisation\" from Prof. Marian Doerk at the Fachhochschule Potsdam in 2015.",
+  "version": "0.0.0",
   "dependencies": {
     "gulp": "^3.9.0"
   },
@@ -13,7 +13,11 @@
     "gulp-concat": "^2.5.2",
     "gulp-imagemin": "^2.2.1",
     "gulp-jshint": "^1.9.2",
-    "gulp-sass": "^1.3.3"
+    "gulp-react": "^3.0.1",
+    "gulp-sass": "^1.3.3",
+    "gulp-stylus": "^2.0.4",
+    "nib": "^1.1.0",
+    "stylus-normalize": "^3.0.3"
   },
   "repository": {
     "type": "git"

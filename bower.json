@@ -24,5 +24,14 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "underscore": "~1.8.3",
+    "backbone": "~1.2.1",
+    "requirejs": "~2.1.18",
+    "requirejs-plugins": "~1.0.3",
+    "requirejs-text": "~2.0.14",
+    "react": "~0.13.3"
+  }
 }
