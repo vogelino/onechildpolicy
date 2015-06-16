@@ -1,0 +1,10 @@
+{
+	"preset": "google",
+	"requireSpaceAfterLineComment": true,
+	"validateIndentation": "\t",
+	"disallowMixedSpacesAndTabs": "smart",
+	"disallowMultipleLineBreaks": false,
+	"disallowSpaceAfterKeywords": [
+		"function"
+	]
+}
