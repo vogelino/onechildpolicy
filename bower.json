@@ -4,7 +4,7 @@
   "authors": [
     "Lucas Vogel <contact@vogelino.ch>"
   ],
-  "description": "Study project about the effects of the one child policy in china. Created by Lucas Vogel (vogelino) within the course \"Introduction to data vizualisation\" from Prof. Marian Doerk at the Fachhochschule Potsdam in 2015.",
+  "description": "Study project about the effects of the one child policy in china. Created by Lucas Vogel (vogelino) within the course \"Introduction to data vizualization\" from Prof. Marian Doerk at the Fachhochschule Potsdam in 2015.",
   "moduleType": [
     "amd",
     "node"
