@@ -1,4 +1,4 @@
-# One child policy – The imbalances it causes
+# One child policy – The imbalances it caused
 This interactive vizualization is born in 2015 within the context of a course of Prof. Marian Doerk named *Introduction to data visualization* of the *Fachhochschule Potsdam*. While students (such as I) were learning about visualization's theory, we had to practically apply the earned knowledge to a personal project. Its realisation included the whole creation process a data visualization project is used to:
 - Conceptualization
 - Research
