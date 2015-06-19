@@ -74,8 +74,8 @@ var paths = {
 		],
 		datagroups: [
 			{
-				name: 'timeTables',
-				path: 'data/timeTables/{,*/}*.csv'
+				name: 'demographyData',
+				path: 'data/demographyData/{,*/}*.json'
 			}
 		]
 	};

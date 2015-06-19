@@ -1,0 +1,326 @@
+[
+	{
+		"Date": "1960",
+		"% of population aged from 0 to 14": 39.6899795532227,
+		"% of population aged from 15 to 64": 56.3430671691895,
+		"% of population aged 65 and above": 3.966952085495
+	},
+	{
+		"Date": "1961",
+		"% of population aged from 0 to 14": 40.0579109191895,
+		"% of population aged from 15 to 64": 56.0476188659668,
+		"% of population aged 65 and above": 3.89447259902954
+	},
+	{
+		"Date": "1962",
+		"% of population aged from 0 to 14": 40.4370613098145,
+		"% of population aged from 15 to 64": 55.7591361999512,
+		"% of population aged 65 and above": 3.80380439758301
+	},
+	{
+		"Date": "1963",
+		"% of population aged from 0 to 14": 40.7803688049316,
+		"% of population aged from 15 to 64": 55.5066184997559,
+		"% of population aged 65 and above": 3.71301293373108
+	},
+	{
+		"Date": "1964",
+		"% of population aged from 0 to 14": 41.0250549316406,
+		"% of population aged from 15 to 64": 55.3289375305176,
+		"% of population aged 65 and above": 3.6460075378418
+	},
+	{
+		"Date": "1965",
+		"% of population aged from 0 to 14": 41.1326599121094,
+		"% of population aged from 15 to 64": 55.2487602233887,
+		"% of population aged 65 and above": 3.61858105659485
+	},
+	{
+		"Date": "1966",
+		"% of population aged from 0 to 14": 41.0818710327148,
+		"% of population aged from 15 to 64": 55.284351348877,
+		"% of population aged 65 and above": 3.63377642631531
+	},
+	{
+		"Date": "1967",
+		"% of population aged from 0 to 14": 40.9005699157715,
+		"% of population aged from 15 to 64": 55.4155120849609,
+		"% of population aged 65 and above": 3.68391823768616
+	},
+	{
+		"Date": "1968",
+		"% of population aged from 0 to 14": 40.6556701660156,
+		"% of population aged from 15 to 64": 55.5840072631836,
+		"% of population aged 65 and above": 3.76032638549805
+	},
+	{
+		"Date": "1969",
+		"% of population aged from 0 to 14": 40.4308204650879,
+		"% of population aged from 15 to 64": 55.7177505493164,
+		"% of population aged 65 and above": 3.85142660140991
+	},
+	{
+		"Date": "1970",
+		"% of population aged from 0 to 14": 40.2730369567871,
+		"% of population aged from 15 to 64": 55.7778358459473,
+		"% of population aged 65 and above": 3.94912552833557
+	},
+	{
+		"Date": "1971",
+		"% of population aged from 0 to 14": 40.2024116516113,
+		"% of population aged from 15 to 64": 55.7455902099609,
+		"% of population aged 65 and above": 4.05199766159058
+	},
+	{
+		"Date": "1972",
+		"% of population aged from 0 to 14": 40.1810111999512,
+		"% of population aged from 15 to 64": 55.6581039428711,
+		"% of population aged 65 and above": 4.16088485717773
+	},
+	{
+		"Date": "1973",
+		"% of population aged from 0 to 14": 40.1289749145508,
+		"% of population aged from 15 to 64": 55.597412109375,
+		"% of population aged 65 and above": 4.2736120223999
+	},
+	{
+		"Date": "1974",
+		"% of population aged from 0 to 14": 39.9436683654785,
+		"% of population aged from 15 to 64": 55.6679649353027,
+		"% of population aged 65 and above": 4.38836574554443
+	},
+	{
+		"Date": "1975",
+		"% of population aged from 0 to 14": 39.5609550476074,
+		"% of population aged from 15 to 64": 55.9351005554199,
+		"% of population aged 65 and above": 4.50394248962402
+	},
+	{
+		"Date": "1976",
+		"% of population aged from 0 to 14": 38.9725189208984,
+		"% of population aged from 15 to 64": 56.4084358215332,
+		"% of population aged 65 and above": 4.6190447807312
+	},
+	{
+		"Date": "1977",
+		"% of population aged from 0 to 14": 38.2151527404785,
+		"% of population aged from 15 to 64": 57.0516052246094,
+		"% of population aged 65 and above": 4.733238697052
+	},
+	{
+		"Date": "1978",
+		"% of population aged from 0 to 14": 37.3293647766113,
+		"% of population aged from 15 to 64": 57.8235206604004,
+		"% of population aged 65 and above": 4.84711408615112
+	},
+	{
+		"Date": "1979",
+		"% of population aged from 0 to 14": 36.3744163513184,
+		"% of population aged from 15 to 64": 58.6641845703125,
+		"% of population aged 65 and above": 4.96139669418335
+	},
+	{
+		"Date": "1980",
+		"% of population aged from 0 to 14": 35.4002838134766,
+		"% of population aged from 15 to 64": 59.5239028930664,
+		"% of population aged 65 and above": 5.07581472396851
+	},
+	{
+		"Date": "1981",
+		"% of population aged from 0 to 14": 34.4147796630859,
+		"% of population aged from 15 to 64": 60.3938636779785,
+		"% of population aged 65 and above": 5.19135570526123
+	},
+	{
+		"Date": "1982",
+		"% of population aged from 0 to 14": 33.4254722595215,
+		"% of population aged from 15 to 64": 61.2682800292969,
+		"% of population aged 65 and above": 5.30624866485596
+	},
+	{
+		"Date": "1983",
+		"% of population aged from 0 to 14": 32.4817390441895,
+		"% of population aged from 15 to 64": 62.1040077209473,
+		"% of population aged 65 and above": 5.41425323486328
+	},
+	{
+		"Date": "1984",
+		"% of population aged from 0 to 14": 31.6411437988281,
+		"% of population aged from 15 to 64": 62.8513832092285,
+		"% of population aged 65 and above": 5.50747394561768
+	},
+	{
+		"Date": "1985",
+		"% of population aged from 0 to 14": 30.9421119689941,
+		"% of population aged from 15 to 64": 63.4765357971191,
+		"% of population aged 65 and above": 5.58135032653809
+	},
+	{
+		"Date": "1986",
+		"% of population aged from 0 to 14": 30.3954467773438,
+		"% of population aged from 15 to 64": 63.970531463623,
+		"% of population aged 65 and above": 5.6340217590332
+	},
+	{
+		"Date": "1987",
+		"% of population aged from 0 to 14": 29.9860038757324,
+		"% of population aged from 15 to 64": 64.3441619873047,
+		"% of population aged 65 and above": 5.669837474823
+	},
+	{
+		"Date": "1988",
+		"% of population aged from 0 to 14": 29.6899356842041,
+		"% of population aged from 15 to 64": 64.6119995117188,
+		"% of population aged 65 and above": 5.69806528091431
+	},
+	{
+		"Date": "1989",
+		"% of population aged from 0 to 14": 29.471586227417,
+		"% of population aged from 15 to 64": 64.7976303100586,
+		"% of population aged 65 and above": 5.73078060150146
+	},
+	{
+		"Date": "1990",
+		"% of population aged from 0 to 14": 29.2994842529297,
+		"% of population aged from 15 to 64": 64.924072265625,
+		"% of population aged 65 and above": 5.77644300460815
+	},
+	{
+		"Date": "1991",
+		"% of population aged from 0 to 14": 29.1670894622803,
+		"% of population aged from 15 to 64": 64.9955749511719,
+		"% of population aged 65 and above": 5.83733367919922
+	},
+	{
+		"Date": "1992",
+		"% of population aged from 0 to 14": 29.0633201599121,
+		"% of population aged from 15 to 64": 65.0249938964844,
+		"% of population aged 65 and above": 5.9116849899292
+	},
+	{
+		"Date": "1993",
+		"% of population aged from 0 to 14": 28.947904586792,
+		"% of population aged from 15 to 64": 65.0534210205078,
+		"% of population aged 65 and above": 5.99867343902588
+	},
+	{
+		"Date": "1994",
+		"% of population aged from 0 to 14": 28.7732791900635,
+		"% of population aged from 15 to 64": 65.130500793457,
+		"% of population aged 65 and above": 6.09621906280518
+	},
+	{
+		"Date": "1995",
+		"% of population aged from 0 to 14": 28.5047092437744,
+		"% of population aged from 15 to 64": 65.2925415039063,
+		"% of population aged 65 and above": 6.20274877548218
+	},
+	{
+		"Date": "1996",
+		"% of population aged from 0 to 14": 28.1394519805908,
+		"% of population aged from 15 to 64": 65.542350769043,
+		"% of population aged 65 and above": 6.318199634552
+	},
+	{
+		"Date": "1997",
+		"% of population aged from 0 to 14": 27.6810207366943,
+		"% of population aged from 15 to 64": 65.8757934570313,
+		"% of population aged 65 and above": 6.44318723678589
+	},
+	{
+		"Date": "1998",
+		"% of population aged from 0 to 14": 27.112886428833,
+		"% of population aged from 15 to 64": 66.3097991943359,
+		"% of population aged 65 and above": 6.57731103897095
+	},
+	{
+		"Date": "1999",
+		"% of population aged from 0 to 14": 26.4186916351318,
+		"% of population aged from 15 to 64": 66.8613891601563,
+		"% of population aged 65 and above": 6.7199182510376
+	},
+	{
+		"Date": "2000",
+		"% of population aged from 0 to 14": 25.5956554412842,
+		"% of population aged from 15 to 64": 67.5343933105469,
+		"% of population aged 65 and above": 6.86995029449463
+	},
+	{
+		"Date": "2001",
+		"% of population aged from 0 to 14": 24.6348438262939,
+		"% of population aged from 15 to 64": 68.336540222168,
+		"% of population aged 65 and above": 7.02861404418945
+	},
+	{
+		"Date": "2002",
+		"% of population aged from 0 to 14": 23.5624713897705,
+		"% of population aged from 15 to 64": 69.242805480957,
+		"% of population aged 65 and above": 7.19472551345825
+	},
+	{
+		"Date": "2003",
+		"% of population aged from 0 to 14": 22.4549942016602,
+		"% of population aged from 15 to 64": 70.1828918457031,
+		"% of population aged 65 and above": 7.36211442947388
+	},
+	{
+		"Date": "2004",
+		"% of population aged from 0 to 14": 21.4124279022217,
+		"% of population aged from 15 to 64": 71.0647354125977,
+		"% of population aged 65 and above": 7.52283954620361
+	},
+	{
+		"Date": "2005",
+		"% of population aged from 0 to 14": 20.507740020752,
+		"% of population aged from 15 to 64": 71.8201751708984,
+		"% of population aged 65 and above": 7.67208480834961
+	},
+	{
+		"Date": "2006",
+		"% of population aged from 0 to 14": 19.7633152008057,
+		"% of population aged from 15 to 64": 72.427131652832,
+		"% of population aged 65 and above": 7.80955505371094
+	},
+	{
+		"Date": "2007",
+		"% of population aged from 0 to 14": 19.1666526794434,
+		"% of population aged from 15 to 64": 72.8938369750977,
+		"% of population aged 65 and above": 7.93950843811035
+	},
+	{
+		"Date": "2008",
+		"% of population aged from 0 to 14": 18.7105178833008,
+		"% of population aged from 15 to 64": 73.2217483520508,
+		"% of population aged 65 and above": 8.06772994995117
+	},
+	{
+		"Date": "2009",
+		"% of population aged from 0 to 14": 18.3752346038818,
+		"% of population aged from 15 to 64": 73.4225921630859,
+		"% of population aged 65 and above": 8.20217609405518
+	},
+	{
+		"Date": "2010",
+		"% of population aged from 0 to 14": 18.1426124572754,
+		"% of population aged from 15 to 64": 73.5073776245117,
+		"% of population aged 65 and above": 8.35000991821289
+	},
+	{
+		"Date": "2011",
+		"% of population aged from 0 to 14": 18.013614654541,
+		"% of population aged from 15 to 64": 73.4779281616211,
+		"% of population aged 65 and above": 8.50845432281494
+	},
+	{
+		"Date": "2012",
+		"% of population aged from 0 to 14": 17.9843711853027,
+		"% of population aged from 15 to 64": 73.3359985351563,
+		"% of population aged 65 and above": 8.67963027954102
+	},
+	{
+		"Date": "2013",
+		"% of population aged from 0 to 14": 18.0308087218189,
+		"% of population aged from 15 to 64": 73.0936384471878,
+		"% of population aged 65 and above": 8.87555283099335
+	}
+]
