@@ -220,7 +220,7 @@ gulp.task('watch', ['build'], function() {
 	gulp.watch(bases.app + 'bower_components/**/{,*/}*.css', 	['styles']);
 	gulp.watch(bases.app + 'stylus/**/{,*/}*.styl',			 	['stylus']);
 	gulp.watch(bases.app + 'jsx/**/{,*/}*',						['react']);
-	gulp.watch(bases.app + 'data/**/{,*/}*',					['createDataLists']);
+	gulp.watch(bases.app + 'data/**/{,*/}*',					['createDataLists', 'copyContents']);
 });
 
 gulp.task('browser-sync', ['watch'], function() {
