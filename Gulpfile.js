@@ -10,7 +10,8 @@ var
 	nib	= require('nib'),
 	browserSync = require('browser-sync'),
 	react = require('gulp-react'),
-	gutils = require('gulp-util');
+	gutils = require('gulp-util'),
+	filelist = require('gulp-filelist');
 
 var bases = {
 		app: 'workspace/',
@@ -29,12 +30,16 @@ var
 	};
 
 var paths = {
-		scripts: 	[
-						'scripts/**/{,*/}*.js'
-					],
-		jsx: 		['jsx/**/{,*/}*.jsx'],
-		stylus: 	['stylus/main.styl'],
-		libsJs: 	[
+		scripts: [
+			'scripts/**/{,*/}*.js'
+		],
+		jsx: [
+			'jsx/**/{,*/}*.jsx'
+		],
+		stylus: [
+			'stylus/main.styl'
+		],
+		libsJs: [
 			'bower_components/requirejs/require.js',
 			'bower_components/jquery/dist/jquery.js',
 			'bower_components/react/react.js',
@@ -45,27 +50,33 @@ var paths = {
 			'bower_components/c3/c3.js',
 			'bower_components/d3/d3.js'
 		],
-		libsCss: 	[
+		libsCss: [
 			'bower_components/c3/c3.css'
 		],
-		fonts: 		[],
-		html: 		[
-						'index.html',
-						'404.html',
-						'scripts/**/{,*/}*.html'
-					],
-		images: 	[
-						'images/**/{,*/}*'
-					],
-		content: 	[
+		fonts: [],
+		html: [
+			'index.html',
+			'404.html',
+			'scripts/**/{,*/}*.html'
+		],
+		images: [
+			'images/**/{,*/}*'
+			],
+		content: [
 			'data/**/{,*/}*.csv',
 			'data/**/{,*/}*.json'
 		],
-		extras: 	[
-						'.htaccess',
-						'robot.txt',
-						'favicon.ico'
-					]
+		extras: [
+			'.htaccess',
+			'robot.txt',
+			'favicon.ico'
+		],
+		datagroups: [
+			{
+				name: 'timeTables',
+				path: 'data/timeTables/{,*/}*.csv'
+			}
+		]
 	};
 
 function throwError(err) {
@@ -181,6 +192,17 @@ gulp.task('copy', function() {
 	.on('error', throwError);
 });
 
+gulp.task('createDataLists', function() {
+	'use strict';
+	paths.datagroups.forEach(function(group) {
+		gulp.src(group.path, {cwd: bases.app})
+			.pipe(filelist(group.name + '.json'))
+			.pipe(gulp.dest(bases.dist + 'data/lists/'))
+			.pipe(reload({stream: true}))
+			.on('error', throwError);
+	});
+});
+
 gulp.task('watch', ['build'], function() {
 	'use strict';
 	gulp.watch(bases.app + 'scripts/**/{,*/}*.js', 				['scripts']);
@@ -198,6 +220,7 @@ gulp.task('watch', ['build'], function() {
 	gulp.watch(bases.app + 'bower_components/**/{,*/}*.css', 	['styles']);
 	gulp.watch(bases.app + 'stylus/**/{,*/}*.styl',			 	['stylus']);
 	gulp.watch(bases.app + 'jsx/**/{,*/}*',						['react']);
+	gulp.watch(bases.app + 'data/**/{,*/}*',					['createDataLists']);
 });
 
 gulp.task('browser-sync', ['watch'], function() {
@@ -218,12 +241,12 @@ gulp.task('build', ['clean'], function() {
 		'styles',
 		'fonts',
 		'stylus',
-		'copy'
+		'copy',
+		'createDataLists'
 	);
 });
 
 gulp.task('default', ['clean'], function() {
 	'use strict';
-	gulp.start('build', 'browser-sync'
-	);
+	gulp.start('build', 'browser-sync');
 });

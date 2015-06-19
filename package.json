@@ -3,7 +3,8 @@
   "description": "Study project about the effects of the one child policy in china. Created by Lucas Vogel (vogelino) within the course \"Introduction to data visualization\" from Prof. Marian Doerk at the Fachhochschule Potsdam in 2015.",
   "version": "0.0.0",
   "dependencies": {
-    "gulp": "^3.9.0"
+    "gulp": "^3.9.0",
+    "gulp-filelist": "^0.2.0"
   },
   "devDependencies": {
     "bower": "^1.3.12",

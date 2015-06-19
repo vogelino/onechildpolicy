@@ -35,15 +35,19 @@ require.config({
 });
 
 require([
-	'views/main-container',
 	'react',
 	'backbone',
 	'jquery',
 	'underscore'
-], function(MainContainer, OriginalReact) {
+], function(OriginalReact) {
+	'use strict';
+
 	window.React = OriginalReact;
-	React.render(
-		<MainContainer />,
-		document.getElementById('main-container')
-	);
+
+	require(['views/MainContainer'], function(MainContainer) {
+		React.render(
+			<MainContainer />,
+			document.getElementById('main-container')
+		);
+	});
 });
