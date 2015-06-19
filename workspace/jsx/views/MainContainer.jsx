@@ -2,7 +2,7 @@
 
 define([
 	'json!../../../data/lists/timeTables.json',
-	'views/charts/container/ChartsContainer'
+	'views/charts/ChartsContainer/ChartsContainer'
 ], function(timeTablesList, ChartsContainer) {
 	'use strict';
 

@@ -37,7 +37,8 @@ var paths = {
 			'jsx/**/{,*/}*.jsx'
 		],
 		stylus: [
-			'stylus/main.styl'
+			'stylus/main.styl',
+			'jsx/**/{,*/}*.styl'
 		],
 		libsJs: [
 			'bower_components/requirejs/require.js',
@@ -97,10 +98,6 @@ gulp.task('clean', function() {
 
 gulp.task('scripts', function() {
 	'use strict';
-	if (!paths.scripts.length) {
-		warn('Js files skiped because of empty paths');
-		return;
-	}
 	gulp.src(paths.scripts, {cwd: bases.app})
 		.pipe(jshint())
 		.on('error', throwError)
@@ -143,6 +140,7 @@ gulp.task('stylus', function () {
 	'use strict';
 	gulp.src(paths.stylus, {cwd: bases.app})
 	.pipe(stylus({use: [nib(), normalize()]}))
+	.pipe(concat('main.css'))
 	.pipe(gulp.dest(bases.dist + 'css/'))
 	.pipe(reload({stream: true}))
 	.on('error', throwError);
@@ -219,7 +217,8 @@ gulp.task('watch', ['build'], function() {
 	gulp.watch(bases.app + 'images/**/{,*/}*',		 			['imagemin']);
 	gulp.watch(bases.app + 'bower_components/**/{,*/}*.css', 	['styles']);
 	gulp.watch(bases.app + 'stylus/**/{,*/}*.styl',			 	['stylus']);
-	gulp.watch(bases.app + 'jsx/**/{,*/}*',						['react']);
+	gulp.watch(bases.app + 'jsx/**/{,*/}*.styl',			 	['stylus']);
+	gulp.watch(bases.app + 'jsx/**/{,*/}*.jsx',					['react']);
 	gulp.watch(bases.app + 'data/**/{,*/}*',					['createDataLists', 'copyContents']);
 });
 

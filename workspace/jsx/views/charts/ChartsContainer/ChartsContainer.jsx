@@ -1,7 +1,7 @@
 /** @jsx React.DOM */
 
 define([
-	'views/charts/container/Chart'
+	'views/charts/Chart/Chart'
 ], function(Chart) {
 	'use strict';
 

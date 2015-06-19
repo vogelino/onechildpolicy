@@ -1,0 +1,35 @@
+.chart
+	box-sizing border-box
+	padding 20px 30px
+	height 400px
+	position relative
+
+	&,
+	h1,
+	svg,
+	.loading-overlay
+		width 100%
+		float left
+
+	svg
+		height 320px
+
+	h1
+		padding 0 30px
+
+	.loading-overlay
+		position absolute
+		top 0
+		left 0
+		text-align center
+		height 100%
+		z-index 1
+		line-height 320px
+		background rgba(darken(white, 10%), .8)
+		transition opacity 300ms ease-out
+		opacity 1
+
+	&.loaded
+		.loading-overlay
+			opacity 0
+			pointer-events none
