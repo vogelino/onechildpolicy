@@ -1,13 +1,14 @@
 .chart
-	box-sizing border-box
 	padding 20px 30px
-	height 400px
+	margin-bottom 20px
 	position relative
+	border-top 1px solid darken(white, 20%)
 
 	&,
 	h1,
 	svg,
 	.loading-overlay
+		box-sizing border-box
 		width 100%
 		float left
 
@@ -33,3 +34,9 @@
 		.loading-overlay
 			opacity 0
 			pointer-events none
+
+	.c3-tooltip
+		box-shadow none
+
+		th
+			background-color darken(white, 90%)

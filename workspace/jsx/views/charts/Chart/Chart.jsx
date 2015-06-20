@@ -18,44 +18,44 @@ define([
 		that.render = function() {
 			var loadedClass = !!this.state.loaded ? 'loaded' : 'loading';
 			var className = 'chart ' + this.props.type + '-chart ' + loadedClass;
-			var title = my.getTitleFromPath(this.props.options.path);
 			return (
 				<div className={className}>
-					<h1>{title}</h1>
+					<h2>{this.props.title}</h2>
 					<div className='loading-overlay'>{'Loading'}</div>
-					<div id={this.props.options.id} />
+					<div id={this.props.id} />
 				</div>
 			);
 		};
 
 		that.componentDidMount = function() {
 			var comp = this;
-			require(['text!../' + comp.props.options.path], function() {
-				my.renderChart({
-					id: '#' + comp.props.options.id,
-					url: comp.props.options.path,
-					type: comp.props.type,
-					onrendered: function() {
-						comp.setState({loaded: true});
-					}
-				});
-			});
+			var c3Chart = c3.generate(my.getChartConfig({
+				id: '#' + comp.props.id,
+				json: comp.props.data,
+				type: comp.props.type,
+				width: comp.props.width,
+				onrendered: function() {
+					comp.setState({loaded: true});
+				}
+			}));
 		};
 
 		my.getTitleFromPath = function(path) {
 			return path
-				.replace('data/timeTables/', '')
-				.replace('.csv', '')
+				.replace('data/demographyData/', '')
+				.replace('.json', '')
 				.replace(/\-/g, ' ');
 		};
 
-		my.renderChart = function(additionalOptions) {
-			var options = {
+		my.getChartConfig = function(additionalOptions) {
+			return {
 				bindto: additionalOptions.id,
 				data: {
-					x: 'Date',
-					xFormat: '%Y',
-					url: additionalOptions.url,
+					json: additionalOptions.json,
+					keys: {
+						x: 'Date',
+						value: my.getKeysValueByDataNode(additionalOptions.json[0])
+					},
 					type: additionalOptions.type,
 					empty: {
 						label: {
@@ -63,11 +63,16 @@ define([
 						}
 					}
 				},
+				size: {
+					width: additionalOptions.width,
+					height: 320
+				},
 				axis: {
 					x: {
-						type: 'timeseries',
+						type: 'indexed',
 						tick: {
-							format: '%Y'
+							format: '%Y',
+							culling: true
 						}
 					}
 				},
@@ -80,8 +85,16 @@ define([
 					}
 				}
 			};
+		};
 
-			return c3.generate(options);
+		my.getKeysValueByDataNode = function(dataNode) {
+			var keysValue = [];
+			_.each(dataNode, function(val, key) {
+				if (key !== 'Date') {
+					keysValue.push(key);
+				}
+			})
+			return keysValue;
 		};
 
 		return React.createClass(that);
