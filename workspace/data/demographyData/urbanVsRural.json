@@ -1,277 +1,326 @@
 [
 	{
 		"Date": "1960",
-		"Population total": 667070000,
-		"Urban population in aglomerations of more than 1 million inhabitants": 52678784
+		"Total": 667070000,
+		"Rural": 558984648,
+		"Urban (aglomerations of more than 1 million inhabitants)": 52678784
 	},
 	{
 		"Date": "1961",
-		"Population total": 660330000,
-		"Urban population in aglomerations of more than 1 million inhabitants": 54233963
+		"Total": 660330000,
+		"Rural": 550002064,
+		"Urban (aglomerations of more than 1 million inhabitants)": 54233963
 	},
 	{
 		"Date": "1962",
-		"Population total": 665770000,
-		"Urban population in aglomerations of more than 1 million inhabitants": 55281964
+		"Total": 665770000,
+		"Rural": 551084460,
+		"Urban (aglomerations of more than 1 million inhabitants)": 55281964
 	},
 	{
 		"Date": "1963",
-		"Population total": 682335000,
-		"Urban population in aglomerations of more than 1 million inhabitants": 56326139
+		"Total": 682335000,
+		"Rural": 561172774,
+		"Urban (aglomerations of more than 1 million inhabitants)": 56326139
 	},
 	{
 		"Date": "1964",
-		"Population total": 698355000,
-		"Urban population in aglomerations of more than 1 million inhabitants": 57512901
+		"Total": 698355000,
+		"Rural": 570563019,
+		"Urban (aglomerations of more than 1 million inhabitants)": 57512901
 	},
 	{
 		"Date": "1965",
-		"Population total": 715185000,
-		"Urban population in aglomerations of more than 1 million inhabitants": 58920718
+		"Total": 715185000,
+		"Rural": 585836641,
+		"Urban (aglomerations of more than 1 million inhabitants)": 58920718
 	},
 	{
 		"Date": "1966",
-		"Population total": 735400000,
-		"Urban population in aglomerations of more than 1 million inhabitants": 60003848
+		"Total": 735400000,
+		"Rural": 603653090,
+		"Urban (aglomerations of more than 1 million inhabitants)": 60003848
 	},
 	{
 		"Date": "1967",
-		"Population total": 754550000,
-		"Urban population in aglomerations of more than 1 million inhabitants": 60765146
+		"Total": 754550000,
+		"Rural": 620353282,
+		"Urban (aglomerations of more than 1 million inhabitants)": 60765146
 	},
 	{
 		"Date": "1968",
-		"Population total": 774510000,
-		"Urban population in aglomerations of more than 1 million inhabitants": 61516831
+		"Total": 774510000,
+		"Rural": 637762514,
+		"Urban (aglomerations of more than 1 million inhabitants)": 61516831
 	},
 	{
 		"Date": "1969",
-		"Population total": 796025000,
-		"Urban population in aglomerations of more than 1 million inhabitants": 62259035
+		"Total": 796025000,
+		"Rural": 656497738,
+		"Urban (aglomerations of more than 1 million inhabitants)": 62259035
 	},
 	{
 		"Date": "1970",
-		"Population total": 818315000,
-		"Urban population in aglomerations of more than 1 million inhabitants": 63009503
+		"Total": 818315000,
+		"Rural": 675928190,
+		"Urban (aglomerations of more than 1 million inhabitants)": 63009503
 	},
 	{
 		"Date": "1971",
-		"Population total": 841105000,
-		"Urban population in aglomerations of more than 1 million inhabitants": 64017233
+		"Total": 841105000,
+		"Rural": 695661123,
+		"Urban (aglomerations of more than 1 million inhabitants)": 64017233
 	},
 	{
 		"Date": "1972",
-		"Population total": 862030000,
-		"Urban population in aglomerations of more than 1 million inhabitants": 65275638
+		"Total": 862030000,
+		"Rural": 713898765,
+		"Urban (aglomerations of more than 1 million inhabitants)": 65275638
 	},
 	{
 		"Date": "1973",
-		"Population total": 881940000,
-		"Urban population in aglomerations of more than 1 million inhabitants": 66571964
+		"Total": 881940000,
+		"Rural": 730387430,
+		"Urban (aglomerations of more than 1 million inhabitants)": 66571964
 	},
 	{
 		"Date": "1974",
-		"Population total": 900350000,
-		"Urban population in aglomerations of more than 1 million inhabitants": 67912983
+		"Total": 900350000,
+		"Rural": 744661478,
+		"Urban (aglomerations of more than 1 million inhabitants)": 67912983
 	},
 	{
 		"Date": "1975",
-		"Population total": 916395000,
-		"Urban population in aglomerations of more than 1 million inhabitants": 69298570
+		"Total": 916395000,
+		"Rural": 756942270,
+		"Urban (aglomerations of more than 1 million inhabitants)": 69298570
 	},
 	{
 		"Date": "1976",
-		"Population total": 930685000,
-		"Urban population in aglomerations of more than 1 million inhabitants": 70676854
+		"Total": 930685000,
+		"Rural": 768187399,
+		"Urban (aglomerations of more than 1 million inhabitants)": 70676854
 	},
 	{
 		"Date": "1977",
-		"Population total": 943455000,
-		"Urban population in aglomerations of more than 1 million inhabitants": 72242853
+		"Total": 943455000,
+		"Rural": 778161684,
+		"Urban (aglomerations of more than 1 million inhabitants)": 72242853
 	},
 	{
 		"Date": "1978",
-		"Population total": 956165000,
-		"Urban population in aglomerations of more than 1 million inhabitants": 74119952
+		"Total": 956165000,
+		"Rural": 785011465,
+		"Urban (aglomerations of more than 1 million inhabitants)": 74119952
 	},
 	{
 		"Date": "1979",
-		"Population total": 969005000,
-		"Urban population in aglomerations of more than 1 million inhabitants": 76058290
+		"Total": 969005000,
+		"Rural": 788605339,
+		"Urban (aglomerations of more than 1 million inhabitants)": 76058290
 	},
 	{
 		"Date": "1980",
-		"Population total": 981235000,
-		"Urban population in aglomerations of more than 1 million inhabitants": 78064358
+		"Total": 981235000,
+		"Rural": 791287529,
+		"Urban (aglomerations of more than 1 million inhabitants)": 78064358
 	},
 	{
 		"Date": "1981",
-		"Population total": 993885000,
-		"Urban population in aglomerations of more than 1 million inhabitants": 80233665
+		"Total": 993885000,
+		"Rural": 793935216,
+		"Urban (aglomerations of more than 1 million inhabitants)": 80233665
 	},
 	{
 		"Date": "1982",
-		"Population total": 1008630000,
-		"Urban population in aglomerations of more than 1 million inhabitants": 82489387
+		"Total": 1008630000,
+		"Rural": 797806157,
+		"Urban (aglomerations of more than 1 million inhabitants)": 82489387
 	},
 	{
 		"Date": "1983",
-		"Population total": 1023310000,
-		"Urban population in aglomerations of more than 1 million inhabitants": 85260509
+		"Total": 1023310000,
+		"Rural": 802837860,
+		"Urban (aglomerations of more than 1 million inhabitants)": 85260509
 	},
 	{
 		"Date": "1984",
-		"Population total": 1036825000,
-		"Urban population in aglomerations of more than 1 million inhabitants": 88189294
+		"Total": 1036825000,
+		"Rural": 806618745,
+		"Urban (aglomerations of more than 1 million inhabitants)": 88189294
 	},
 	{
 		"Date": "1985",
-		"Population total": 1051040000,
-		"Urban population in aglomerations of more than 1 million inhabitants": 91257077
+		"Total": 1051040000,
+		"Rural": 810625110,
+		"Urban (aglomerations of more than 1 million inhabitants)": 91257077
 	},
 	{
 		"Date": "1986",
-		"Population total": 1066790000,
-		"Urban population in aglomerations of more than 1 million inhabitants": 94489865
+		"Total": 1066790000,
+		"Rural": 815464944,
+		"Urban (aglomerations of more than 1 million inhabitants)": 94489865
 	},
 	{
 		"Date": "1987",
-		"Population total": 1084035000,
-		"Urban population in aglomerations of more than 1 million inhabitants": 97898567
+		"Total": 1084035000,
+		"Rural": 821058949,
+		"Urban (aglomerations of more than 1 million inhabitants)": 97898567
 	},
 	{
 		"Date": "1988",
-		"Population total": 1101630000,
-		"Urban population in aglomerations of more than 1 million inhabitants": 101508062
+		"Total": 1101630000,
+		"Rural": 826508924,
+		"Urban (aglomerations of more than 1 million inhabitants)": 101508062
 	},
 	{
 		"Date": "1989",
-		"Population total": 1118650000,
-		"Urban population in aglomerations of more than 1 million inhabitants": 105335718
+		"Total": 1118650000,
+		"Rural": 831145763,
+		"Urban (aglomerations of more than 1 million inhabitants)": 105335718
 	},
 	{
 		"Date": "1990",
-		"Population total": 1135185000,
-		"Urban population in aglomerations of more than 1 million inhabitants": 109431604
+		"Total": 1135185000,
+		"Rural": 835019382,
+		"Urban (aglomerations of more than 1 million inhabitants)": 109431604
 	},
 	{
 		"Date": "1991",
-		"Population total": 1150780000,
-		"Urban population in aglomerations of more than 1 million inhabitants": 115287820
+		"Total": 1150780000,
+		"Rural": 836478966,
+		"Urban (aglomerations of more than 1 million inhabitants)": 115287820
 	},
 	{
 		"Date": "1992",
-		"Population total": 1164970000,
-		"Urban population in aglomerations of more than 1 million inhabitants": 121566418
+		"Total": 1164970000,
+		"Rural": 836448460,
+		"Urban (aglomerations of more than 1 million inhabitants)": 121566418
 	},
 	{
 		"Date": "1993",
-		"Population total": 1178440000,
-		"Urban population in aglomerations of more than 1 million inhabitants": 128319282
+		"Total": 1178440000,
+		"Rural": 835478607,
+		"Urban (aglomerations of more than 1 million inhabitants)": 128319282
 	},
 	{
 		"Date": "1994",
-		"Population total": 1191835000,
-		"Urban population in aglomerations of more than 1 million inhabitants": 135626604
+		"Total": 1191835000,
+		"Rural": 833998460,
+		"Urban (aglomerations of more than 1 million inhabitants)": 135626604
 	},
 	{
 		"Date": "1995",
-		"Population total": 1204855000,
-		"Urban population in aglomerations of more than 1 million inhabitants": 143540312
+		"Total": 1204855000,
+		"Rural": 831819843,
+		"Urban (aglomerations of more than 1 million inhabitants)": 143540312
 	},
 	{
 		"Date": "1996",
-		"Population total": 1217550000,
-		"Urban population in aglomerations of more than 1 million inhabitants": 152142471
+		"Total": 1217550000,
+		"Rural": 828956742,
+		"Urban (aglomerations of more than 1 million inhabitants)": 152142471
 	},
 	{
 		"Date": "1997",
-		"Population total": 1230075000,
-		"Urban population in aglomerations of more than 1 million inhabitants": 161502411
+		"Total": 1230075000,
+		"Rural": 825589438,
+		"Urban (aglomerations of more than 1 million inhabitants)": 161502411
 	},
 	{
 		"Date": "1998",
-		"Population total": 1241935000,
-		"Urban population in aglomerations of more than 1 million inhabitants": 171751961
+		"Total": 1241935000,
+		"Rural": 821328874,
+		"Urban (aglomerations of more than 1 million inhabitants)": 171751961
 	},
 	{
 		"Date": "1999",
-		"Population total": 1252735000,
-		"Urban population in aglomerations of more than 1 million inhabitants": 182960094
+		"Total": 1252735000,
+		"Rural": 815968942,
+		"Urban (aglomerations of more than 1 million inhabitants)": 182960094
 	},
 	{
 		"Date": "2000",
-		"Population total": 1262645000,
-		"Urban population in aglomerations of more than 1 million inhabitants": 195268378
+		"Total": 1262645000,
+		"Rural": 809645853,
+		"Urban (aglomerations of more than 1 million inhabitants)": 195268378
 	},
 	{
 		"Date": "2001",
-		"Population total": 1271850000,
-		"Urban population in aglomerations of more than 1 million inhabitants": 204269750
+		"Total": 1271850000,
+		"Rural": 800082679,
+		"Urban (aglomerations of more than 1 million inhabitants)": 204269750
 	},
 	{
 		"Date": "2002",
-		"Population total": 1280400000,
-		"Urban population in aglomerations of more than 1 million inhabitants": 211476797
+		"Total": 1280400000,
+		"Rural": 788406300,
+		"Urban (aglomerations of more than 1 million inhabitants)": 211476797
 	},
 	{
 		"Date": "2003",
-		"Population total": 1288400000,
-		"Urban population in aglomerations of more than 1 million inhabitants": 218865905
+		"Total": 1288400000,
+		"Rural": 775926016,
+		"Urban (aglomerations of more than 1 million inhabitants)": 218865905
 	},
 	{
 		"Date": "2004",
-		"Population total": 1296075000,
-		"Urban population in aglomerations of more than 1 million inhabitants": 226391448
+		"Total": 1296075000,
+		"Rural": 762817902,
+		"Urban (aglomerations of more than 1 million inhabitants)": 226391448
 	},
 	{
 		"Date": "2005",
-		"Population total": 1303720000,
-		"Urban population in aglomerations of more than 1 million inhabitants": 234155582
+		"Total": 1303720000,
+		"Rural": 749352182,
+		"Urban (aglomerations of more than 1 million inhabitants)": 234155582
 	},
 	{
 		"Date": "2006",
-		"Population total": 1311020000,
-		"Urban population in aglomerations of more than 1 million inhabitants": 242248746
+		"Total": 1311020000,
+		"Rural": 735901746,
+		"Urban (aglomerations of more than 1 million inhabitants)": 242248746
 	},
 	{
 		"Date": "2007",
-		"Population total": 1317885000,
-		"Urban population in aglomerations of more than 1 million inhabitants": 250675164
+		"Total": 1317885000,
+		"Rural": 722214159,
+		"Urban (aglomerations of more than 1 million inhabitants)": 250675164
 	},
 	{
 		"Date": "2008",
-		"Population total": 1324655000,
-		"Urban population in aglomerations of more than 1 million inhabitants": 259463456
+		"Total": 1324655000,
+		"Rural": 708173810,
+		"Urban (aglomerations of more than 1 million inhabitants)": 259463456
 	},
 	{
 		"Date": "2009",
-		"Population total": 1331260000,
-		"Urban population in aglomerations of more than 1 million inhabitants": 268592824
+		"Total": 1331260000,
+		"Rural": 693852712,
+		"Urban (aglomerations of more than 1 million inhabitants)": 268592824
 	},
 	{
 		"Date": "2010",
-		"Population total": 1337705000,
-		"Urban population in aglomerations of more than 1 million inhabitants": 278116789
+		"Total": 1337705000,
+		"Rural": 679206337,
+		"Urban (aglomerations of more than 1 million inhabitants)": 278116789
 	},
 	{
 		"Date": "2011",
-		"Population total": 1344130000,
-		"Urban population in aglomerations of more than 1 million inhabitants": 287340155
+		"Total": 1344130000,
+		"Rural": 664363135,
+		"Urban (aglomerations of more than 1 million inhabitants)": 287340155
 	},
 	{
 		"Date": "2012",
-		"Population total": 1350695000,
-		"Urban population in aglomerations of more than 1 million inhabitants": 296585631
+		"Total": 1350695000,
+		"Rural": 649832871,
+		"Urban (aglomerations of more than 1 million inhabitants)": 296585631
 	},
 	{
 		"Date": "2013",
-		"Population total": 1357380000,
-		"Urban population in aglomerations of more than 1 million inhabitants": 306176213
-	},
-	{
-		"Date": "2014",
-		"Population total": null,
-		"Urban population in aglomerations of more than 1 million inhabitants": 316153747
+		"Total": 1357380000,
+		"Rural": 635688202,
+		"Urban (aglomerations of more than 1 million inhabitants)": 306176213
 	}
 ]
