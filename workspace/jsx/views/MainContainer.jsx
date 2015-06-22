@@ -2,6 +2,8 @@
 
 define([
 	'views/charts/ChartsContainer/ChartsContainer',
+	'views/layoutingComponents/Jumbotron/Jumbotron',
+	'views/layoutingComponents/BlockHeader/BlockHeader',
 
 	'json!../../../data/demographyData/urbanVsRural.json',
 	'json!../../../data/demographyData/populationAge.json',
@@ -11,6 +13,8 @@ define([
 	'json!../../../data/birthAndChildhood/lifeExpectancyAtBirth.json'
 ], function(
 	ChartsContainer,
+	Jumbotron,
+	BlockHeader,
 
 	urbanVsRural,
 	populationAge,
@@ -24,25 +28,46 @@ define([
 		var that = {};
 		var my = {};
 
+		that.mixins = [ReactIntl.IntlMixin];
+
 		that.render = function() {
 			var chartContainers = my.getChartContainers();
+			var contents = {
+				jumbotron: {
+					title: [
+						'Is the one child polic',
+						<span className='thin-space'></span>,
+						'y a success?'
+					],
+					blockquote: {
+						quote: 'China says the policy reduced births by 400 million ' +
+						'since 1970 — but some experts say the number may be ' +
+						'closer to 100 million.',
+						cite: {
+							text: 'io9.com',
+							link: 'http://io9.com/'
+						}
+					}
+				},
+				demographyHeader: {
+					title: 'Chinese\'s demography evolution since the 60\'s',
+					text: 'Lorem ipsum dolor sit amet, consectetur adipisicing ' +
+						'elit. Et, quia, autem. Obcaecati odit ipsa dolores enim ' +
+						'deleniti officiis distinctio velit, aliquam provident ' +
+						'deserunt, magnam dolorum! Dolore, labore minima? ' +
+						'Pariatur, adipisci.'
+				},
+				birthAndChildhoodHeader: {
+					title: 'Chinese\'s births and fertility evolution since the 60\'s'
+				}
+			};
 
 			return (
 				<div id='main-container'>
-					<div className='block-header'>
-						<h1>
-							{'Chinese\'s demography evolution since the 60\'s'}
-						</h1>
-						<p>
-							{'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, quia, autem. Obcaecati odit ipsa dolores enim deleniti officiis distinctio velit, aliquam provident deserunt, magnam dolorum! Dolore, labore minima? Pariatur, adipisci.'}
-						</p>
-					</div>
+					<Jumbotron {...contents.jumbotron} />
+					<BlockHeader {...contents.demographyHeader} />
 					<ChartsContainer charts={chartContainers.demography} />
-					<div className='block-header'>
-						<h1>
-							{'Chinese\'s births and fertility evolution since the 60\'s'}
-						</h1>
-					</div>
+					<BlockHeader {...contents.birthAndChildhoodHeader} />
 					<ChartsContainer charts={chartContainers.birthAndChildhood} />
 				</div>
 			);
@@ -56,13 +81,25 @@ define([
 						id: 'chart1',
 						key: 1,
 						data: urbanVsRural,
-						type: 'area-step'
+						formaters: {
+							x: '%Y',
+							y: function(y) {
+								return y === 0 ? 0 : (y / 1000000) + ' Mio'
+							}
+						},
+						type: 'line'
 					},
 					{
 						title: 'Chinese\'s population by age groups',
 						id: 'chart2',
 						key: 2,
 						data: populationAge,
+						formaters: {
+							x: '%Y',
+							y: function(y) {
+								return y === 0 ? 0 : y + '%'
+							}
+						},
 						type: 'area-spline'
 					}
 				],
@@ -72,7 +109,7 @@ define([
 						id: 'chart3',
 						key: 3,
 						data: fertilityRate,
-						type: 'area-step'
+						type: 'line'
 					},
 					{
 						title: 'Chinese\'s crude birth rate',

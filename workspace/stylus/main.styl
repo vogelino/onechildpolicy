@@ -1,22 +1,34 @@
-
-body,
-.c3 svg
-	font-family 'Lato', sans-serif;
+@require 'variables.styl'
 
 body
-	background darken(white, 10%)
+	color $textColor
+	font-family $textFontFamily
+	background $backgroundColor
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 
-.block-header
-	width 100%
-	float left
-	box-sizing border-box
-	padding 60px
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+.c3 svg
+	font-family $headlineFontFamily
 
-	h1
-		margin 10px 0
+a
+	transition all 200ms ease
+	color $link
 
-	p
-		margin 5px 0
-		width 100%
-		float left
-		max-width 800px
+	&:hover
+		color $linkHover
+
+span.thin-space
+	font-size inherit
+	line-height inherit
+	font-weight 300
+	padding 0
+	margin 0
+	position static
+	display inline-block
+	width .06em

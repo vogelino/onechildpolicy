@@ -7,6 +7,7 @@ require.config({
 		jquery: '../bower_components/jquery/dist/jquery',
 		backbone: '../bower_components/backbone/backbone',
 		react: '../bower_components/react/react',
+		reactIntl: '../bower_components/react-intl/dist/react-intl-with-locales.min',
 		underscore: '../bower_components/underscore/underscore',
 		text: '../bower_components/requirejs-text/text',
 		json: '../bower_components/requirejs-plugins/src/json',
@@ -44,9 +45,12 @@ require([
 
 	window.React = OriginalReact;
 
-	require(['views/MainContainer'], function(MainContainer) {
+	require([
+		'views/MainContainer',
+		'reactIntl'
+	], function(MainContainer) {
 		React.render(
-			<MainContainer />,
+			<MainContainer locales={['en-US']} />,
 			document.getElementById('main-container')
 		);
 	});

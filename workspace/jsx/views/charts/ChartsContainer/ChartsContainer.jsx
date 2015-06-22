@@ -19,13 +19,7 @@ define([
 			var comp = this;
 			var chartList = this.props.charts.map(function(chart, index) {
 				return (
-					<Chart
-						title={chart.title}
-						id={chart.id}
-						data={chart.data}
-						type={chart.type}
-						key={chart.key}
-						width={comp.state.width} />
+					<Chart {...chart} />
 				);
 			});
 			return (

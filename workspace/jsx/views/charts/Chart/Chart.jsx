@@ -5,7 +5,7 @@ define([
 ], function(c3) {
 	'use strict';
 
-	var ChartsContainer = function() {
+	var Chart = function() {
 		var that = {};
 		var my = {};
 
@@ -33,6 +33,10 @@ define([
 				id: '#' + comp.props.id,
 				json: comp.props.data,
 				type: comp.props.type,
+				xFormater: comp.props.formaters && comp.props.formaters.x ?
+					comp.props.formaters.x : undefined,
+				yFormater: comp.props.formaters && comp.props.formaters.y ?
+					comp.props.formaters.y : undefined,
 				width: comp.props.width,
 				onrendered: function() {
 					comp.setState({loaded: true});
@@ -40,16 +44,22 @@ define([
 			}));
 		};
 
-		my.getTitleFromPath = function(path) {
-			return path
-				.replace('data/demographyData/', '')
-				.replace('.json', '')
-				.replace(/\-/g, ' ');
-		};
-
 		my.getChartConfig = function(additionalOptions) {
 			return {
 				bindto: additionalOptions.id,
+				padding: {
+					left: 60,
+					right: 30,
+				},
+				color: {
+					pattern: [
+						'#82B3D4',
+						'#FAA916',
+						'#CA4425',
+						'#405DAE',
+						'#4F7F46'
+					]
+				},
 				data: {
 					json: additionalOptions.json,
 					keys: {
@@ -71,8 +81,19 @@ define([
 					x: {
 						type: 'indexed',
 						tick: {
-							format: '%Y',
-							culling: true
+							format: additionalOptions.xFormater || function(x) {
+								return x;
+							},
+							culling: true,
+							outer: false
+						}
+					},
+					y: {
+						tick: {
+							outer: false,
+							format: additionalOptions.yFormater || function(y) {
+								return y;
+							}
 						}
 					}
 				},
@@ -80,7 +101,8 @@ define([
 				grid: {
 					x: {
 						lines: [
-							{value: '1980', text: 'The one child policy is created'}
+							{value: '1980', text: 'The one child policy starts'},
+							{value: '1978', text: 'Family planning policy is introduced'}
 						]
 					}
 				}
@@ -100,5 +122,5 @@ define([
 		return React.createClass(that);
 	};
 
-	return new ChartsContainer();
+	return new Chart();
 });
