@@ -10,8 +10,13 @@ define([
 		var my = {};
 
 		that.render = function() {
+			var inlineStyle = {};
+			if (!!this.props.backgroundImage) {
+				inlineStyle.backgroundImage = 'url(' +
+					this.props.backgroundImage + ')';
+			}
 			return (
-				<div className="jumbotron">
+				<div className="jumbotron" style={inlineStyle}>
 					{!!this.props.title ?
 						<h1>
 							{this.props.title}

@@ -33,16 +33,25 @@ define([
 		that.render = function() {
 			var chartContainers = my.getChartContainers();
 			var contents = {
+				introduction: {
+					text: 'Lorem ipsum dolor sit amet, consectetur adipisicing ' +
+						'elit. Et, quia, autem. Obcaecati odit ipsa dolores enim ' +
+						'deleniti officiis distinctio velit, aliquam provident ' +
+						'deserunt, magnam dolorum! Dolore, labore minima? ' +
+						'Pariatur, adipisci.'
+				},
 				jumbotron: {
 					title: [
 						'Is the one child polic',
 						<span className='thin-space'></span>,
 						'y a success?'
 					],
+					backgroundImage: 'content/images/china-one-child.jpg',
 					blockquote: {
-						quote: 'China says the policy reduced births by 400 million ' +
-						'since 1970 — but some experts say the number may be ' +
-						'closer to 100 million.',
+						quote: 'China says the policy reduced births by ' +
+							' 400 million since 1970 — ' +
+							'but some experts say the number may be ' +
+							'closer to 100 million.',
 						cite: {
 							text: 'io9.com',
 							link: 'http://io9.com/'
@@ -65,6 +74,7 @@ define([
 			return (
 				<div id='main-container'>
 					<Jumbotron {...contents.jumbotron} />
+					<BlockHeader {...contents.introduction} />
 					<BlockHeader {...contents.demographyHeader} />
 					<ChartsContainer charts={chartContainers.demography} />
 					<BlockHeader {...contents.birthAndChildhoodHeader} />

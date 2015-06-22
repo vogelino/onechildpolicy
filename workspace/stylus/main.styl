@@ -16,12 +16,20 @@ h6
 .c3 svg
 	font-family $headlineFontFamily
 
-a
+a,
+.c3-legend-item text
 	transition all 200ms ease
 	color $link
+	fill $link
 
-	&:hover
+.c3-legend-item-focused text,
+a:hover
 		color $linkHover
+		fill $linkHover
+
+.c3-legend-item text
+	-webkit-font-smoothing: subpixel-antialiased;
+	-moz-osx-font-smoothing: initial;
 
 span.thin-space
 	font-size inherit

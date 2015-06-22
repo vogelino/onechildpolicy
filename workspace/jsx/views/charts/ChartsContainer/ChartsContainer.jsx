@@ -10,13 +10,13 @@ define([
 		var my = {};
 
 		that.getInitialState = function() {
+			that.comp = this;
 			return {
 				width: window.width
 			};
 		};
 
 		that.render = function() {
-			var comp = this;
 			var chartList = this.props.charts.map(function(chart, index) {
 				return (
 					<Chart {...chart} />
@@ -30,7 +30,16 @@ define([
 		};
 
 		that.componentDidMount = function() {
-			this.setState({width: $('.charts-container').width()});
+			my.resizeCharts();
+			$(window).resize(my.resizeCharts);
+		};
+
+		my.resizeCharts = function() {
+			that.comp.props.charts.forEach(function(chart) {
+				that.comp.setState({
+					width: $(chart.id).innerWidth()
+				});
+			});
 		};
 
 		return React.createClass(that);

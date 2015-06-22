@@ -1,19 +1,22 @@
+@require '../../../../stylus/variables.styl'
+
 blockquote
 	margin: 0
 	padding 4px 0 6px 70px
+	box-sizing border-box
 	font-size 28px
 	font-style italic
 	font-weight 300
 	letter-spacing .01em
-	border-left 4px solid rgba(white, .2)
+	border-left 4px solid rgba($blockquoteColor, .4)
 	color $blockquoteColor
-	quotes: "\201C""\201D""\2018""\2019"
+	quotes "\201C""\201D""\2018""\2019"
 
 	&:before
 		position absolute
 		font-size 80px
 		font-family georgia
-		color rgba(white, .2)
+		color rgba($blockquoteColor, .4)
 		content open-quote
 		margin-left -53px
 		margin-top -6px
@@ -28,4 +31,15 @@ blockquote
 		&:before
 			content "—"
 			margin-right 10px
-			color rgba(white, .2)
+			color rgba($blockquoteColor, .4)
+
+	.jumbotron &
+		color $jumbotronColor
+		border-left-color rgba($jumbotronBlockquoteColor, .4)
+		max-width $contentMaxWidth + 140
+		margin 0 auto
+
+	.jumbotron &:before,
+	.jumbotron & footer cite:before
+		color rgba($jumbotronBlockquoteColor, .4)
+
