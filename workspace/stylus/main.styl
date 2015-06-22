@@ -3,9 +3,11 @@
 body
 	color $textColor
 	font-family $textFontFamily
-	background $backgroundColor
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+	background $jumbotronLink url(../content/images/ajax-loader.gif) no-repeat center 42vmin
+	-webkit-font-smoothing antialiased
+	-moz-osx-font-smoothing grayscale
+	height 100%
+	position relative
 
 h1,
 h2,
@@ -21,6 +23,7 @@ a,
 	transition all 200ms ease
 	color $link
 	fill $link
+	text-decoration none
 
 .c3-legend-item-focused text,
 a:hover
@@ -28,8 +31,8 @@ a:hover
 		fill $linkHover
 
 .c3-legend-item text
-	-webkit-font-smoothing: subpixel-antialiased;
-	-moz-osx-font-smoothing: initial;
+	-webkit-font-smoothing subpixel-antialiased
+	-moz-osx-font-smoothing initial
 
 span.thin-space
 	font-size inherit
@@ -40,3 +43,12 @@ span.thin-space
 	position static
 	display inline-block
 	width .06em
+
+#main-container > div
+	margin-top 4px
+	background-color $backgroundColor
+	transition opacity 600ms ease-out
+	opacity 0
+
+	&.loaded
+		opacity 1

@@ -3,7 +3,7 @@
 .jumbotron
 	width 100%
 	box-sizing border-box
-	padding 90px
+	padding 150px 90px 90px
 	margin-bottom 30px
 	background-color $jumbotronBackground
 	color $jumbotronColor
@@ -16,3 +16,20 @@
 		font-size 46px
 		letter-spacing .03em
 		max-width $contentMaxWidth
+
+		&:before
+			content '计划生育'
+			position absolute
+			left 0
+			right 0
+			width 100%
+			text-align center
+			top 100px
+			font-size 22px
+			color $jumbotronLink
+
+	a
+		color $jumbotronLink
+
+		&:hover
+			color $jumbotronLinkHover

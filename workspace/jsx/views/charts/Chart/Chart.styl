@@ -11,7 +11,7 @@
 	padding 20px 30px 40px
 	margin-bottom 0
 	position relative
-	border-bottom 1px solid darken(white, 20%)
+	border-bottom 1px solid darken($backgroundColor, 20%)
 
 	&,
 	h2,
@@ -32,6 +32,10 @@
 		text-align center
 		max-width $contentMaxWidth
 
+	.c3 path,
+	.c3 line
+		stroke darken($backgroundColor, 40%)
+
 	.loading-overlay
 		position absolute
 		top 0
@@ -40,7 +44,7 @@
 		height 100%
 		z-index 1
 		line-height 320px
-		background rgba(darken(white, 5%), .8)
+		background rgba($backgroundColor, .8)
 		transition opacity 300ms ease-out
 		opacity 1
 
@@ -53,4 +57,4 @@
 		box-shadow none
 
 		th
-			background-color darken(white, 90%)
+			background-color $textColor

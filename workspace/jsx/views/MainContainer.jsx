@@ -30,15 +30,19 @@ define([
 
 		that.mixins = [ReactIntl.IntlMixin];
 
+		that.getInitialState = function() {
+			return {
+				loaded: false
+			};
+		};
+
 		that.render = function() {
 			var chartContainers = my.getChartContainers();
+			var loadedClass = !!this.state.loaded ? 'loaded' : 'loading';
+			var className = 'main-wrapper ' + loadedClass;
 			var contents = {
 				introduction: {
-					text: 'Lorem ipsum dolor sit amet, consectetur adipisicing ' +
-						'elit. Et, quia, autem. Obcaecati odit ipsa dolores enim ' +
-						'deleniti officiis distinctio velit, aliquam provident ' +
-						'deserunt, magnam dolorum! Dolore, labore minima? ' +
-						'Pariatur, adipisci.'
+					text: 'The chinese controversy law allowing couples to have only one child has been heavily discussed and debated since it started to be enacted in 1780. Despite the animated critics of its brutal methods such as forced abortions, selective abortions or important fines, the policy has been seen as another of China’s "successes" according to Party leaders. The government estimates the policy to have prevented 400 million births. However, some experts report that it may rather be closer to 100 million. So was it worth it?'
 				},
 				jumbotron: {
 					title: [
@@ -60,11 +64,7 @@ define([
 				},
 				demographyHeader: {
 					title: 'Chinese\'s demography evolution since the 60\'s',
-					text: 'Lorem ipsum dolor sit amet, consectetur adipisicing ' +
-						'elit. Et, quia, autem. Obcaecati odit ipsa dolores enim ' +
-						'deleniti officiis distinctio velit, aliquam provident ' +
-						'deserunt, magnam dolorum! Dolore, labore minima? ' +
-						'Pariatur, adipisci.'
+					text: 'Because of Mao Zedong\'s belief was that population growth would empower the country,  the population continued to increase and no successful family planning strategy could be developed. In the 70’s already china was populated by around 818 million people. In Order to control the fertily rate and to control the demographic situation of china, the chinese government encouraged the couples to marry later and to have two children at most. It’s later in 1978 that the one child policy was introduced and since then, only couples living in rural aglomerations who had already a girl and the couples where both spouses were coming from chinese minorities could make a second child.'
 				},
 				birthAndChildhoodHeader: {
 					title: 'Chinese\'s births and fertility evolution since the 60\'s'
@@ -72,7 +72,7 @@ define([
 			};
 
 			return (
-				<div id='main-container'>
+				<div className={className}>
 					<Jumbotron {...contents.jumbotron} />
 					<BlockHeader {...contents.introduction} />
 					<BlockHeader {...contents.demographyHeader} />
@@ -81,6 +81,10 @@ define([
 					<ChartsContainer charts={chartContainers.birthAndChildhood} />
 				</div>
 			);
+		};
+
+		that.componentDidMount = function() {
+			this.setState({loaded: true});
 		};
 
 		my.getChartContainers = function() {
