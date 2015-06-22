@@ -22,14 +22,16 @@ define([
 				<div className={className}>
 					<h2>{this.props.title}</h2>
 					<div className='loading-overlay'>{'Loading'}</div>
-					<div id={this.props.id} />
+					<div className="chart-wrapper">
+						<div id={this.props.id} />
+					</div>
 				</div>
 			);
 		};
 
 		that.componentDidMount = function() {
 			var comp = this;
-			var c3Chart = c3.generate(my.getChartConfig({
+			my.c3Chart = c3.generate(my.getChartConfig({
 				id: '#' + comp.props.id,
 				json: comp.props.data,
 				type: comp.props.type,
@@ -37,7 +39,6 @@ define([
 					comp.props.formaters.x : undefined,
 				yFormater: comp.props.formaters && comp.props.formaters.y ?
 					comp.props.formaters.y : undefined,
-				width: comp.props.width,
 				onrendered: function() {
 					comp.setState({loaded: true});
 				}

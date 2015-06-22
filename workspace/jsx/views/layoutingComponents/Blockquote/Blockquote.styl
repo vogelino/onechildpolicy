@@ -38,6 +38,10 @@ blockquote
 		border-left-color rgba($jumbotronBlockquoteColor, .4)
 		max-width $contentMaxWidth + 140
 		margin 0 auto
+		@media screen and (max-width: 590px)
+			font-size 22px
+			border-left none
+			padding-left 0
 
 	.jumbotron &:before,
 	.jumbotron & footer cite:before
