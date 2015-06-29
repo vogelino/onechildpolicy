@@ -45,10 +45,35 @@ define([
 		};
 
 		that.render = function() {
-			var chartContainers = my.getChartContainers();
 			var loadedClass = !!this.state.loaded ? 'loaded' : 'loading';
 			var className = 'main-wrapper ' + loadedClass;
-			var contents = {
+			var contents = that.model.get('contents');
+			var charts = that.model.get('charts');
+
+			return (
+				<div className={className}>
+					<Jumbotron {...contents.jumbotron} />
+					<BlockHeader {...contents.introduction} />
+					<BlockHeader {...contents.demographyHeader} />
+					<ChartsContainer
+						charts={charts.demography} />
+					<BlockHeader
+						{...contents.birthAndChildhoodHeader}
+						alt={true} />
+					<ChartsContainer
+						charts={charts.birthAndChildhood.fertility}
+						aside={true}/>
+					<ChartsContainer
+						charts={charts.birthAndChildhood.birthRate}
+						aside={true}/>
+					<ChartsContainer
+						charts={charts.birthAndChildhood.lifeExpectancy} />
+				</div>
+			);
+		};
+
+		my.getContents = function() {
+			return {
 				introduction: {
 					text: texts.get('introduction.text'),
 					alt: true
@@ -74,23 +99,56 @@ define([
 					alt: true
 				}
 			};
+		};
 
-			return (
-				<div className={className}>
-					<Jumbotron {...contents.jumbotron} />
-					<BlockHeader {...contents.introduction} />
-					<BlockHeader {...contents.demographyHeader} />
-					<ChartsContainer charts={chartContainers.demography} />
-					<BlockHeader {...contents.birthAndChildhoodHeader} alt={true} />
-					<ChartsContainer charts={chartContainers.birthAndChildhood.fertility} aside={true}/>
-					<ChartsContainer charts={chartContainers.birthAndChildhood.birthRate} aside={true}/>
-					<ChartsContainer charts={chartContainers.birthAndChildhood.lifeExpectancy} />
-				</div>
-			);
+		that.componentWillMount = function() {
+			if (!that.model) {
+				var Model = Backbone.Model.extend({});
+				that.model = new Model();
+			}
+
+			that.model.set('contents', my.getContents());
+			that.model.set('charts', my.getChartContainers());
 		};
 
 		that.componentDidMount = function() {
+			my.checkElementsVisibility();
 			this.setState({loaded: true});
+
+			my.initVisibleElemOnScrollIdentifier();
+		};
+
+		my.initVisibleElemOnScrollIdentifier = function() {
+			var checkElementsVisibility = _.throttle(my.checkElementsVisibility, 200);
+			$(window).scroll(checkElementsVisibility);
+		};
+
+		my.checkElementsVisibility = function() {
+			var $elems = $('.chart, .block-header, .jumbotron');
+			$elems.each(function(index, elem) {
+				if (my.isScrolledIntoView(elem)) {
+					$(elem).addClass('visible');
+				}
+				else {
+					$(elem).removeClass('visible');
+				}
+			});
+		};
+
+		my.isScrolledIntoView = function(elem) {
+			var $elem = $(elem);
+			var $window = $(window);
+
+			var margin = $(elem).outerHeight();
+
+			var docViewTop = $window.scrollTop();
+			var docViewBottom = docViewTop + $window.height();
+
+			var elemTop = $elem.offset().top;
+			var elemBottom = elemTop + $elem.height();
+
+			return ((elemBottom <= (docViewBottom + margin)) &&
+				(elemTop >= (docViewTop - margin)));
 		};
 
 		my.getChartContainers = function() {
