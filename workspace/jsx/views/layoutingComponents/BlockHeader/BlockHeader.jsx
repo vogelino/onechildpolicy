@@ -15,11 +15,9 @@ define([
 		};
 
 		that.render = function() {
-			var inlineStyle = {
-
-			};
+			var altClass = !!this.props.alt ? ' alt' : '';
 			return (
-				<div className="block-header">
+				<div className={'block-header' + altClass}>
 					{!!this.props.title ? <h1>{this.props.title}</h1> : ''}
 					{!!this.props.text ? <p>{this.props.text}</p> : ''}
 				</div>

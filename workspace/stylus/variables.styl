@@ -10,16 +10,26 @@ $textColor = #1f313b;
 $headlineFontFamily = 'Open Sans', sans-serif;
 
 // Links
-$link = #5eabdb;
-$linkHover = #db6c58;
+$link = #cf4e43;
+$linkHover = #e8ab44;
+
+// Alternatives
+$altBackgroundColor = $textColor;
+$altTextColor = $backgroundColor;
+$altLink = $link;
+$altLinkHover = $linkHover;
+
 
 //### COMPONENTS ###//
 // Jumbotron
-$jumbotronBackground = $textColor;
-$jumbotronColor = $backgroundColor;
-$jumbotronLink = #51c181;
-$jumbotronLinkHover = #e8ab44;
+$jumbotronBackground = $altBackgroundColor;
+$jumbotronColor = $altTextColor;
+$jumbotronLink = $altLink;
+$jumbotronLinkHover = $altLinkHover;
 
 // Blockquote
 $blockquoteColor = $textColor;
 $jumbotronBlockquoteColor = $jumbotronColor;
+
+// Strips
+$stripBackground = desaturate(lighten(#5eabdb, 80%), 95%);
