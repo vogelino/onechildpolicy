@@ -16,14 +16,20 @@ define([
 		};
 
 		that.render = function() {
+			var opts = this.props.options;
 			var loadedClass = !!this.state.loaded ? 'loaded' : 'loading';
-			var className = 'chart ' + this.props.type + '-chart ' + loadedClass;
+			var altClass = !!this.props.alt ? ' alt' : '';
+			var className = 'chart ' +
+					opts.data.type + '-chart ' +
+					loadedClass +
+					altClass;
 			return (
-				<div className={className}>
+				<div className={className} key={this.props.id}>
 					<h2>{this.props.title}</h2>
+					<cite>{this.props.source}</cite>
 					<div className='loading-overlay'>{'Loading'}</div>
-					<div className="chart-wrapper">
-						<div id={this.props.id} />
+					<div className='chart-wrapper'>
+						<div id={'chart' + this.props.id} />
 					</div>
 				</div>
 			);
@@ -31,43 +37,53 @@ define([
 
 		that.componentDidMount = function() {
 			var comp = this;
-			my.c3Chart = c3.generate(my.getChartConfig({
-				id: '#' + comp.props.id,
-				json: comp.props.data,
-				type: comp.props.type,
-				xFormater: comp.props.formaters && comp.props.formaters.x ?
-					comp.props.formaters.x : undefined,
-				yFormater: comp.props.formaters && comp.props.formaters.y ?
-					comp.props.formaters.y : undefined,
-				onrendered: function() {
-					comp.setState({loaded: true});
-				}
-			}));
+
+			var defaults = {};
+
+			defaults.bindto = '#chart' + comp.props.id;
+
+			defaults.onrendered = function() {
+				comp.setState({loaded: true});
+			};
+
+			var options = !!comp.props.options ?
+					$.extend({}, defaults, comp.props.options, true) : {};
+
+			my.c3Chart = c3.generate(my.getChartConfig(options));
 		};
 
-		my.getChartConfig = function(additionalOptions) {
-			return {
-				bindto: additionalOptions.id,
+		my.getChartConfig = function(options) {
+
+			if (!options) { return undefined; };
+
+			var defaults = {
 				padding: {
 					left: 60,
 					right: 30,
 				},
 				color: {
 					pattern: [
-						'#51c181',
-						'#db6c58',
-						'#5eabdb',
+						'#7690e4',
+						'#cf4e43',
 						'#e8ab44',
-						'#1f313b'
+						'#CC7EBE',
+						'#6B8838',
+						'#69788C',
+						'#68D789',
+						'#B1866F',
+						'#C5D597',
+						'#C76077',
+						'#D2D249',
+						'#5B8A6D',
+						'#C58E37',
+						'#CCC4CF',
+						'#8193D1'
 					]
 				},
 				data: {
-					json: additionalOptions.json,
 					keys: {
-						x: 'Date',
-						value: my.getKeysValueByDataNode(additionalOptions.json[0])
+						x: 'Date'
 					},
-					type: additionalOptions.type,
 					empty: {
 						label: {
 							text: 'No data'
@@ -75,30 +91,22 @@ define([
 					}
 				},
 				size: {
-					width: additionalOptions.width,
 					height: 320
 				},
 				axis: {
 					x: {
 						type: 'indexed',
 						tick: {
-							format: additionalOptions.xFormater || function(x) {
-								return x;
-							},
 							culling: true,
 							outer: false
 						}
 					},
 					y: {
 						tick: {
-							outer: false,
-							format: additionalOptions.yFormater || function(y) {
-								return y;
-							}
+							outer: false
 						}
 					}
 				},
-				onrendered: additionalOptions.onrendered,
 				grid: {
 					x: {
 						lines: [
@@ -108,6 +116,11 @@ define([
 					}
 				}
 			};
+
+			var options = $.extend(true, defaults, options);
+			options.data.keys.value = my.getKeysValueByDataNode(options.data.json[0]);
+
+			return options;
 		};
 
 		my.getKeysValueByDataNode = function(dataNode) {

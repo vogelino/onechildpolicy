@@ -5,6 +5,8 @@ define([
 	'views/layoutingComponents/Jumbotron/Jumbotron',
 	'views/layoutingComponents/BlockHeader/BlockHeader',
 
+	'util/textUtil',
+
 	'json!../../../data/demographyData/urbanVsRural.json',
 	'json!../../../data/demographyData/populationAge.json',
 
@@ -17,6 +19,8 @@ define([
 	ChartsContainer,
 	Jumbotron,
 	BlockHeader,
+
+	texts,
 
 	urbanVsRural,
 	populationAge,
@@ -46,32 +50,28 @@ define([
 			var className = 'main-wrapper ' + loadedClass;
 			var contents = {
 				introduction: {
-					text: 'The chinese controversy law allowing couples to have only one child has been heavily discussed and debated since it started to be enacted in 1780. Despite the animated critics of its brutal methods such as forced abortions, selective abortions or important fines, the policy has been seen as another of China’s "successes" according to Party leaders. The government estimates the policy to have prevented 400 million births. However, some experts report that it may rather be closer to 100 million. So was it worth it?'
+					text: texts.get('introduction.text'),
+					alt: true
 				},
 				jumbotron: {
-					title: [
-						'Is the one child polic',
-						<span className='thin-space'></span>,
-						'y a success?'
-					],
+					title: texts.get('introJumbotron.title'),
 					backgroundImage: 'content/images/china-one-child.jpg',
 					blockquote: {
-						quote: 'China says the policy reduced births by ' +
-							' 400 million since 1970 — ' +
-							'but some experts say the number may be ' +
-							'closer to 100 million.',
+						quote: texts.get('introJumbotron.blockquote.quote'),
 						cite: {
-							text: 'io9.com',
-							link: 'http://io9.com/'
+							text: texts.get('introJumbotron.blockquote.cite.text'),
+							link: texts.get('introJumbotron.blockquote.cite.link')
 						}
 					}
 				},
 				demographyHeader: {
-					title: 'Chinese\'s demography evolution since the 60\'s',
-					text: 'Because of Mao Zedong\'s belief was that population growth would empower the country,  the population continued to increase and no successful family planning strategy could be developed. In the 70’s already china was populated by around 818 million people. In Order to control the fertily rate and to control the demographic situation of china, the chinese government encouraged the couples to marry later and to have two children at most. It’s later in 1978 that the one child policy was introduced and since then, only couples living in rural aglomerations who had already a girl and the couples where both spouses were coming from chinese minorities could make a second child.'
+					title: texts.get('demography.title'),
+					text: texts.get('demography.text')
 				},
 				birthAndChildhoodHeader: {
-					title: 'Chinese\'s births and fertility evolution since the 60\'s'
+					title: texts.get('birthAndChildhood.title'),
+					text: texts.get('birthAndChildhood.text'),
+					alt: true
 				}
 			};
 
@@ -97,55 +97,179 @@ define([
 			return {
 				demography: [
 					{
-						title: 'Chinese\'s absolute population',
-						id: 'chart1',
-						key: 1,
-						data: urbanVsRural,
-						formaters: {
-							x: '%Y',
-							y: function(y) {
-								return y === 0 ? 0 : (y / 1000000) + ' Mio'
+						title: texts.get('charts.absolutePopulation.title'),
+						source: texts.get('charts.sources.worldBank'),
+						id: 1,
+						options: {
+							data: {
+								type: 'line',
+								json: urbanVsRural
+							},
+							axis: {
+								x: {
+									tick: {
+										format: '%Y'
+									}
+								},
+								y: {
+									tick: {
+										format: function(y) {
+											return y === 0 ?
+												0 : (y / 1000000) + ' Mio'
+										}
+									},
+									max: 1757380000
+								}
+							},
+							grid: {
+								y: {
+									lines: [
+										{
+											value: 1757380000,
+											text: texts.get('charts.' +
+												'absolutePopulation.' +
+												'horizontalLine')
+										}
+									]
+								}
 							}
-						},
-						type: 'line'
+						}
 					},
 					{
-						title: 'Chinese\'s population by age groups',
-						id: 'chart2',
-						key: 2,
-						data: populationAge,
-						formaters: {
-							x: '%Y',
-							y: function(y) {
-								return y === 0 ? 0 : y + '%'
+						title: texts.get('charts.populationAgeGroups.title'),
+						source: texts.get('charts.sources.worldBank'),
+						id: 2,
+						options: {
+							data: {
+								type: 'area-spline',
+								json: populationAge,
+								groups: [
+									[texts.get(
+										'charts.populationAgeGroups.groups.child'),
+									texts.get(
+										'charts.populationAgeGroups.groups.adult'),
+									texts.get(
+										'charts.populationAgeGroups.groups.old')]
+								]
+							},
+							axis: {
+								x: {
+									tick: {
+										format: '%Y'
+									}
+								},
+								y: {
+									tick: {
+										format: function(y) {
+											return y === 0 ? 0 : y + '%'
+										}
+									},
+									max: 100,
+									padding: {top: 3, bottom: 0}
+								}
 							}
-						},
-						type: 'area-spline'
+						}
 					}
 				],
-				birthAndChildhood: [
-					{
-						title: 'Chinese\'s fertility rate',
-						id: 'chart3',
-						key: 3,
-						data: fertilityRate,
-						type: 'line'
-					},
-					{
-						title: 'Chinese\'s crude birth rate',
-						id: 'chart4',
-						key: 4,
-						data: birthRate,
-						type: 'line'
-					},
-					{
-						title: 'Chinese\'s life expectancy at birth',
-						id: 'chart5',
-						key: 5,
-						data: lifeExpectancyAtBirth,
-						type: 'line'
-					}
-				]
+				birthAndChildhood: {
+					fertility: [
+						{
+							title: texts.get('charts.fertility.title'),
+							source: texts.get('charts.sources.worldBank'),
+							id: 3,
+							alt: true,
+							options: {
+								data: {
+									type: 'line',
+									json: fertilityRate
+								}
+							}
+						},
+						{
+							title: texts.get('charts.fertility.title'),
+							source: texts.get('charts.sources.unitedNations'),
+							id: 4,
+							alt: true,
+							options: {
+								data: {
+									type: 'line',
+									json: fertilityRateUndesa
+								},
+								tooltip: {
+									format: {
+										title: function(x) {
+											return (parseInt(x, 10) - 5) + ' - ' + x
+										}
+									}
+								},
+								axis: {
+									x: {
+										tick: {
+											format: function(x) {
+												return (parseInt(x, 10) - 5) + ' - ' + x
+											}
+										}
+									}
+								}
+							}
+						}
+					],
+					birthRate: [
+						{
+							title: texts.get('charts.birthRate.title'),
+							source: texts.get('charts.sources.worldBank'),
+							id: 5,
+							alt: true,
+							options: {
+								data: {
+									type: 'line',
+									json: birthRate
+								}
+							}
+						},
+						{
+							title: texts.get('charts.birthRate.title'),
+							source: texts.get('charts.sources.unitedNations'),
+							id: 6,
+							alt: true,
+							options: {
+								data: {
+									type: 'line',
+									json: birthRateUndesa
+								},
+								tooltip: {
+									format: {
+										title: function(x) {
+											return (parseInt(x, 10) - 5) + ' - ' + x
+										}
+									}
+								},
+								axis: {
+									x: {
+										tick: {
+											format: function(x) {
+												return (parseInt(x, 10) - 5) + ' - ' + x
+											}
+										}
+									}
+								}
+							}
+						}
+					],
+					lifeExpectancy: [
+						{
+							title: texts.get('charts.lifeExpectancy.title'),
+							source: texts.get('charts.sources.worldBank'),
+							id: 7,
+							options: {
+								data: {
+									type: 'line',
+									json: lifeExpectancyAtBirth
+								}
+							}
+						}
+					]
+				}
 			};
 		};
 
