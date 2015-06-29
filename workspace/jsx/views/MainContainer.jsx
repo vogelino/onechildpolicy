@@ -9,7 +9,9 @@ define([
 	'json!../../../data/demographyData/populationAge.json',
 
 	'json!../../../data/birthAndChildhood/fertilityRate.json',
+	'json!../../../data/birthAndChildhood/fertilityRateUndesa.json',
 	'json!../../../data/birthAndChildhood/birthRate.json',
+	'json!../../../data/birthAndChildhood/birthRateUndesa.json',
 	'json!../../../data/birthAndChildhood/lifeExpectancyAtBirth.json'
 ], function(
 	ChartsContainer,
@@ -20,7 +22,9 @@ define([
 	populationAge,
 
 	fertilityRate,
+	fertilityRateUndesa,
 	birthRate,
+	birthRateUndesa,
 	lifeExpectancyAtBirth) {
 	'use strict';
 

@@ -1,0 +1,123 @@
+[
+	{
+		"Date": "1955",
+		"15 to 19 years old": 9.65,
+		"20 to 24 years old": 2.784,
+		"25 to 29 years old": 2.895,
+		"30 to 34 years old": 2.443,
+		"35 to 39 years old": 1.942,
+		"40 to 44 years old": 1.026,
+		"45 to 49 years old": 0.159
+	},
+	{
+		"Date": "1960",
+		"15 to 19 years old": 7.23,
+		"20 to 24 years old": 2.530,
+		"25 to 29 years old": 2.618,
+		"30 to 34 years old": 2.311,
+		"35 to 39 years old": 1.752,
+		"40 to 44 years old": 0.898,
+		"45 to 49 years old": 0.120
+	},
+	{
+		"Date": "1965",
+		"15 to 19 years old": 6.48,
+		"20 to 24 years old": 2.836,
+		"25 to 29 years old": 3.044,
+		"30 to 34 years old": 2.653,
+		"35 to 39 years old": 2.066,
+		"40 to 44 years old": 0.880,
+		"45 to 49 years old": 0.98
+	},
+	{
+		"Date": "1970",
+		"15 to 19 years old": 4.87,
+		"20 to 24 years old": 2.826,
+		"25 to 29 years old": 3.182,
+		"30 to 34 years old": 2.588,
+		"35 to 39 years old": 1.829,
+		"40 to 44 years old": 0.866,
+		"45 to 49 years old": 0.95
+	},
+	{
+		"Date": "1975",
+		"15 to 19 years old": 2.95,
+		"20 to 24 years old": 2.392,
+		"25 to 29 years old": 2.839,
+		"30 to 34 years old": 2.021,
+		"35 to 39 years old": 1.325,
+		"40 to 44 years old": 0.582,
+		"45 to 49 years old": 0.77
+	},
+	{
+		"Date": "1980",
+		"15 to 19 years old": 1.54,
+		"20 to 24 years old": 1.882,
+		"25 to 29 years old": 1.969,
+		"30 to 34 years old": 1.179,
+		"35 to 39 years old": 0.549,
+		"40 to 44 years old": 0.248,
+		"45 to 49 years old": 0.47
+	},
+	{
+		"Date": "1985",
+		"15 to 19 years old": 1.95,
+		"20 to 24 years old": 2.159,
+		"25 to 29 years old": 2.067,
+		"30 to 34 years old": 0.643,
+		"35 to 39 years old": 0.218,
+		"40 to 44 years old": 0.92,
+		"45 to 49 years old": 0.11
+	},
+	{
+		"Date": "1990",
+		"15 to 19 years old": 2.47,
+		"20 to 24 years old": 2.511,
+		"25 to 29 years old": 1.928,
+		"30 to 34 years old": 0.728,
+		"35 to 39 years old": 0.233,
+		"40 to 44 years old": 0.69,
+		"45 to 49 years old": 0.15
+	},
+	{
+		"Date": "1995",
+		"15 to 19 years old": 0.55,
+		"20 to 24 years old": 1.774,
+		"25 to 29 years old": 1.587,
+		"30 to 34 years old": 0.518,
+		"35 to 39 years old": 0.110,
+		"40 to 44 years old": 0.44,
+		"45 to 49 years old": 0.11
+	},
+	{
+		"Date": "2000",
+		"15 to 19 years old": 0.59,
+		"20 to 24 years old": 1.408,
+		"25 to 29 years old": 1.156,
+		"30 to 34 years old": 0.380,
+		"35 to 39 years old": 0.82,
+		"40 to 44 years old": 0.26,
+		"45 to 49 years old": 0.09
+	},
+	{
+		"Date": "2005",
+		"15 to 19 years old": 0.75,
+		"20 to 24 years old": 1.394,
+		"25 to 29 years old": 1.082,
+		"30 to 34 years old": 0.416,
+		"35 to 39 years old": 0.103,
+		"40 to 44 years old": 0.21,
+		"45 to 49 years old": 0.09
+	},
+	{
+		"Date": "2010",
+		"15 to 19 years old": 0.84,
+		"20 to 24 years old": 1.416,
+		"25 to 29 years old": 1.196,
+		"30 to 34 years old": 0.415,
+		"35 to 39 years old": 0.106,
+		"40 to 44 years old": 0.34,
+		"45 to 49 years old": 0.09
+	}
+
+]
