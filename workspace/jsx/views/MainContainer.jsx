@@ -81,8 +81,10 @@ define([
 					<BlockHeader {...contents.introduction} />
 					<BlockHeader {...contents.demographyHeader} />
 					<ChartsContainer charts={chartContainers.demography} />
-					<BlockHeader {...contents.birthAndChildhoodHeader} />
-					<ChartsContainer charts={chartContainers.birthAndChildhood} />
+					<BlockHeader {...contents.birthAndChildhoodHeader} alt={true} />
+					<ChartsContainer charts={chartContainers.birthAndChildhood.fertility} aside={true}/>
+					<ChartsContainer charts={chartContainers.birthAndChildhood.birthRate} aside={true}/>
+					<ChartsContainer charts={chartContainers.birthAndChildhood.lifeExpectancy} />
 				</div>
 			);
 		};

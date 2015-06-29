@@ -12,11 +12,12 @@ define([
 		that.render = function() {
 			var chartList = this.props.charts.map(function(chart, index) {
 				return (
-					<Chart {...chart} />
+					<Chart {...chart} key={chart.id * 10} />
 				);
 			});
+			var asideClassName = !!this.props.aside ? 'aside' : '';
 			return (
-				<div className="charts-container">
+				<div className={'charts-container ' + asideClassName}>
 					{chartList}
 				</div>
 			);
