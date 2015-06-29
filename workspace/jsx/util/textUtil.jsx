@@ -3,7 +3,8 @@ define([
 ], function(texts) {
 	'use strict';
 
-	var that = {}, my = {};
+	var that = {};
+	var my = {};
 
 	my.texts = texts;
 
@@ -11,11 +12,10 @@ define([
 			if (!path) {
 				return my.texts;
 			}
-			var paths = path.split('.'),
-				current = my.texts,
-				i;
+			var paths = path.split('.');
+			var current = my.texts;
 
-			for (i = 0; i < paths.length; ++i) {
+			for (var i = 0; i < paths.length; ++i) {
 				if (_.isUndefined(current[paths[i]])) {
 					return undefined;
 				}
