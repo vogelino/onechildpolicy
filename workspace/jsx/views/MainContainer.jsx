@@ -3,7 +3,7 @@
 define([
 	'views/charts/ChartsContainer/ChartsContainer',
 	'views/layoutingComponents/Jumbotron/Jumbotron',
-	'views/layoutingComponents/BlockHeader/BlockHeader',
+	'views/layoutingComponents/ContentBlock/ContentBlock',
 
 	'util/textUtil',
 
@@ -18,7 +18,7 @@ define([
 ], function(
 	ChartsContainer,
 	Jumbotron,
-	BlockHeader,
+	ContentBlock,
 
 	texts,
 
@@ -53,11 +53,13 @@ define([
 			return (
 				<div className={className}>
 					<Jumbotron {...contents.jumbotron} />
-					<BlockHeader {...contents.introduction} />
-					<BlockHeader {...contents.demographyHeader} />
-					<ChartsContainer
-						charts={charts.demography} />
-					<BlockHeader
+					<ContentBlock {...contents.introduction} />
+					<ContentBlock {...contents.demographyHeader} />
+					<ChartsContainer charts={charts.absolutePopulation} />
+					<ContentBlock {...contents.absolutePopulation} />
+					<ChartsContainer charts={charts.populationAgeGroups} />
+					<ContentBlock {...contents.populationAgeGroups} />
+					<ContentBlock
 						{...contents.birthAndChildhoodHeader}
 						alt={true} />
 					<ChartsContainer
@@ -93,6 +95,12 @@ define([
 					title: texts.get('demography.title'),
 					text: texts.get('demography.text')
 				},
+				absolutePopulation: {
+					text: texts.get('absolutePopulation.text')
+				},
+				populationAgeGroups: {
+					text: texts.get('populationAgeGroups.text')
+				},
 				birthAndChildhoodHeader: {
 					title: texts.get('birthAndChildhood.title'),
 					text: texts.get('birthAndChildhood.text'),
@@ -124,7 +132,7 @@ define([
 		};
 
 		my.checkElementsVisibility = function() {
-			var $elems = $('.chart, .block-header, .jumbotron');
+			var $elems = $('.chart, .content-block, .jumbotron');
 			$elems.each(function(index, elem) {
 				if (my.isScrolledIntoView(elem)) {
 					$(elem).addClass('visible');
@@ -153,7 +161,7 @@ define([
 
 		my.getChartContainers = function() {
 			return {
-				demography: [
+				absolutePopulation: [
 					{
 						title: texts.get('charts.absolutePopulation.title'),
 						source: texts.get('charts.sources.worldBank'),
@@ -192,7 +200,9 @@ define([
 								}
 							}
 						}
-					},
+					}
+				],
+				populationAgeGroups: [
 					{
 						title: texts.get('charts.populationAgeGroups.title'),
 						source: texts.get('charts.sources.worldBank'),
