@@ -59,17 +59,17 @@ define([
 					<ContentBlock {...contents.absolutePopulation} />
 					<ChartsContainer charts={charts.populationAgeGroups} />
 					<ContentBlock {...contents.populationAgeGroups} />
-					<ContentBlock
-						{...contents.birthAndChildhoodHeader}
-						alt={true} />
+					<ContentBlock {...contents.birthAndChildhoodHeader}/>
 					<ChartsContainer
 						charts={charts.birthAndChildhood.fertility}
 						aside={true}/>
+					<ContentBlock
+						{...contents.crudeBirthRate}
+						alt={true} />
 					<ChartsContainer
 						charts={charts.birthAndChildhood.birthRate}
 						aside={true}/>
-					<ChartsContainer
-						charts={charts.birthAndChildhood.lifeExpectancy} />
+					<ContentBlock {...contents.conclusionHeader}/>
 				</div>
 			);
 		};
@@ -105,6 +105,15 @@ define([
 					title: texts.get('birthAndChildhood.title'),
 					text: texts.get('birthAndChildhood.text'),
 					alt: true
+				},
+				crudeBirthRate: {
+					text: texts.get('crudeBirthRate.text'),
+					alt: true
+				},
+				conclusionHeader: {
+					title: texts.get('conclusion.title'),
+					text: texts.get('conclusion.text'),
+					alt: false
 				}
 			};
 		};
@@ -194,7 +203,13 @@ define([
 											value: 1757380000,
 											text: texts.get('charts.' +
 												'absolutePopulation.' +
-												'horizontalLine')
+												'horizontalLine1')
+										},
+										{
+											value: 1457380000,
+											text: texts.get('charts.' +
+												'absolutePopulation.' +
+												'horizontalLine2')
 										}
 									]
 								}
@@ -320,19 +335,6 @@ define([
 											}
 										}
 									}
-								}
-							}
-						}
-					],
-					lifeExpectancy: [
-						{
-							title: texts.get('charts.lifeExpectancy.title'),
-							source: texts.get('charts.sources.worldBank'),
-							id: 7,
-							options: {
-								data: {
-									type: 'line',
-									json: lifeExpectancyAtBirth
 								}
 							}
 						}
