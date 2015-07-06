@@ -1,0 +1,40 @@
+@require '../../../../stylus/variables.styl'
+
+.footer,
+.footer-content,
+.footer-column
+	width 100%
+	box-sizing border-box
+	display block
+
+.footer-container
+	background-color $footerBackground
+	color $footerColor
+	padding 70px 90px 80px
+
+	a
+		color $footerLink
+
+		&:hover
+			color $footerLinkHover
+
+	.footer-content
+		max-width $contentMaxWidth
+		margin-right auto
+		margin-left auto
+
+	.footer-column
+
+		p
+			font-size 16px
+			line-height 22px
+			padding 3px
+
+	&.footer-2-columns .footer-column
+		width 50%
+
+		&:first-child
+			padding-right 20px
+
+		&:last-child
+			padding-left 20px

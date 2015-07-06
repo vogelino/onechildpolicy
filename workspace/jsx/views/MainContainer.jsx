@@ -4,6 +4,7 @@ define([
 	'views/charts/ChartsContainer/ChartsContainer',
 	'views/layoutingComponents/Jumbotron/Jumbotron',
 	'views/layoutingComponents/ContentBlock/ContentBlock',
+	'views/layoutingComponents/Footer/Footer',
 
 	'util/textUtil',
 
@@ -19,6 +20,7 @@ define([
 	ChartsContainer,
 	Jumbotron,
 	ContentBlock,
+	Footer,
 
 	texts,
 
@@ -70,6 +72,7 @@ define([
 						charts={charts.birthAndChildhood.birthRate}
 						aside={true}/>
 					<ContentBlock {...contents.conclusionHeader}/>
+					<Footer {...contents.footer}/>
 				</div>
 			);
 		};
@@ -82,14 +85,14 @@ define([
 				},
 				jumbotron: {
 					title: texts.get('introJumbotron.title'),
-					backgroundImage: 'content/images/china-one-child.jpg',
-					blockquote: {
-						quote: texts.get('introJumbotron.blockquote.quote'),
-						cite: {
-							text: texts.get('introJumbotron.blockquote.cite.text'),
-							link: texts.get('introJumbotron.blockquote.cite.link')
-						}
-					}
+					backgroundImage: 'content/images/china-one-child.jpg'
+					// blockquote: {
+					// 	quote: texts.get('introJumbotron.blockquote.quote'),
+					// 	cite: {
+					// 		text: texts.get('introJumbotron.blockquote.cite.text'),
+					// 		link: texts.get('introJumbotron.blockquote.cite.link')
+					// 	}
+					// }
 				},
 				demographyHeader: {
 					title: texts.get('demography.title'),
@@ -114,6 +117,14 @@ define([
 					title: texts.get('conclusion.title'),
 					text: texts.get('conclusion.text'),
 					alt: false
+				},
+				footer: {
+					columns: [
+						{
+							title: texts.get('footer.column1.title'),
+							text: texts.get('footer.column1.text')
+						}
+					]
 				}
 			};
 		};
@@ -141,12 +152,11 @@ define([
 		};
 
 		my.checkElementsVisibility = function() {
-			var $elems = $('.chart, .content-block, .jumbotron');
+			var $elems = $('.chart, .content-block, .jumbotron, .footer-content');
 			$elems.each(function(index, elem) {
 				if (my.isScrolledIntoView(elem)) {
 					$(elem).addClass('visible');
-				}
-				else {
+				} else {
 					$(elem).removeClass('visible');
 				}
 			});

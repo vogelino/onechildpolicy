@@ -1,7 +1,7 @@
 [
 	{
 		"Date": "1955",
-		"15 to 19 years old": 9.65,
+		"15 to 19 years old": 0.965,
 		"20 to 24 years old": 2.784,
 		"25 to 29 years old": 2.895,
 		"30 to 34 years old": 2.443,
@@ -11,7 +11,7 @@
 	},
 	{
 		"Date": "1960",
-		"15 to 19 years old": 7.23,
+		"15 to 19 years old": 0.723,
 		"20 to 24 years old": 2.530,
 		"25 to 29 years old": 2.618,
 		"30 to 34 years old": 2.311,
@@ -21,7 +21,7 @@
 	},
 	{
 		"Date": "1965",
-		"15 to 19 years old": 6.48,
+		"15 to 19 years old": 0.648,
 		"20 to 24 years old": 2.836,
 		"25 to 29 years old": 3.044,
 		"30 to 34 years old": 2.653,
@@ -31,7 +31,7 @@
 	},
 	{
 		"Date": "1970",
-		"15 to 19 years old": 4.87,
+		"15 to 19 years old": 0.487,
 		"20 to 24 years old": 2.826,
 		"25 to 29 years old": 3.182,
 		"30 to 34 years old": 2.588,
@@ -41,7 +41,7 @@
 	},
 	{
 		"Date": "1975",
-		"15 to 19 years old": 2.95,
+		"15 to 19 years old": 0.295,
 		"20 to 24 years old": 2.392,
 		"25 to 29 years old": 2.839,
 		"30 to 34 years old": 2.021,
@@ -51,7 +51,7 @@
 	},
 	{
 		"Date": "1980",
-		"15 to 19 years old": 1.54,
+		"15 to 19 years old": 0.154,
 		"20 to 24 years old": 1.882,
 		"25 to 29 years old": 1.969,
 		"30 to 34 years old": 1.179,
@@ -61,7 +61,7 @@
 	},
 	{
 		"Date": "1985",
-		"15 to 19 years old": 1.95,
+		"15 to 19 years old": 0.195,
 		"20 to 24 years old": 2.159,
 		"25 to 29 years old": 2.067,
 		"30 to 34 years old": 0.643,
@@ -71,7 +71,7 @@
 	},
 	{
 		"Date": "1990",
-		"15 to 19 years old": 2.47,
+		"15 to 19 years old": 0.247,
 		"20 to 24 years old": 2.511,
 		"25 to 29 years old": 1.928,
 		"30 to 34 years old": 0.728,
@@ -81,7 +81,7 @@
 	},
 	{
 		"Date": "1995",
-		"15 to 19 years old": 0.55,
+		"15 to 19 years old": 0.055,
 		"20 to 24 years old": 1.774,
 		"25 to 29 years old": 1.587,
 		"30 to 34 years old": 0.518,
@@ -91,7 +91,7 @@
 	},
 	{
 		"Date": "2000",
-		"15 to 19 years old": 0.59,
+		"15 to 19 years old": 0.059,
 		"20 to 24 years old": 1.408,
 		"25 to 29 years old": 1.156,
 		"30 to 34 years old": 0.380,
@@ -101,7 +101,7 @@
 	},
 	{
 		"Date": "2005",
-		"15 to 19 years old": 0.75,
+		"15 to 19 years old": 0.075,
 		"20 to 24 years old": 1.394,
 		"25 to 29 years old": 1.082,
 		"30 to 34 years old": 0.416,
@@ -111,7 +111,7 @@
 	},
 	{
 		"Date": "2010",
-		"15 to 19 years old": 0.84,
+		"15 to 19 years old": 0.084,
 		"20 to 24 years old": 1.416,
 		"25 to 29 years old": 1.196,
 		"30 to 34 years old": 0.415,

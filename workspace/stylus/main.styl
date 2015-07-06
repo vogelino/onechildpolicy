@@ -53,9 +53,13 @@ span.thin-space
 		transition-delay 300ms
 
 		.chart,
-		.content-block,
-		.jumbotron
+		.content-block
 			background-color $backgroundColor
+
+		.chart,
+		.content-block,
+		.jumbotron,
+		.footer-content
 			transition all 400ms ease-out
 			opacity 0
 			-webkit-transform translateZ(-30px)
@@ -91,7 +95,8 @@ span.thin-space
 
 			.chart,
 			.content-block,
-			.jumbotron
+			.jumbotron,
+			.footer-content
 
 				&.visible
 					opacity 1
