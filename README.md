@@ -1,5 +1,5 @@
-# One child policy – The imbalances it caused
-This interactive vizualization is born in 2015 within the context of a course of Prof. Marian Doerk named *Introduction to data visualization* of the *Fachhochschule Potsdam*. While students (such as I) were learning about visualization's theory, we had to practically apply the earned knowledge to a personal project. Its realisation included the whole creation process a data visualization project is used to:
+# Is the one child policy a success?
+This interactive vizualization is born in 2015 within the context of a course of Prof. Marian Doerk named *Introduction to data visualization* of the *Fachhochschule Potsdam*. While students (such as I) were learning about visualization's theory, they had to practically apply the earned knowledge to a personal project. Its realisation included the whole creation process a data visualization project is used to:
 - Conceptualization
 - Research
 - Data gathering
@@ -29,11 +29,11 @@ Following technologies are used in the project:
 
 ### Todo's
 Actually, the data is gathered and the code project is configured. Still, there is a lot of work to do now:
-- Find the fact and charasteristics I want to focus on
-- Find the way of presentation and exploration
-- Mockup and design the data vis.
-- Code the data vis.
-- Add labels, legends, descriptions and additional informations
+- <s>Find the fact and charasteristics I want to focus on</s>
+- <s>Find the way of presentation and exploration</s> (could be improved)
+- Mockup and design the data vis. (missed step)
+- <s>Code the data vis.</s>
+- <s>Add labels, legends, descriptions and additional informations</s>
 - Clean and prepare
 - Publish
 
