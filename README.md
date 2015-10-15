@@ -27,15 +27,6 @@ Following technologies are used in the project:
 * [ReactJs] - A JavaScript library for building user interfaces
 * [jQuery] - duh
 
-### Todo's
-Actually, the data is gathered and the code project is configured. Still, there is a lot of work to do now:
-- <s>Find the fact and charasteristics I want to focus on</s>
-- <s>Find the way of presentation and exploration</s> (could be improved)
-- Mockup and design the data vis. (missed step)
-- <s>Code the data vis.</s>
-- <s>Add labels, legends, descriptions and additional informations</s>
-- Clean and prepare
-- Publish
 
 License
 ----
