@@ -13,7 +13,7 @@ This interactive vizualization is born in 2015 within the context of a course of
 0.0.0
 
 ### Development
-The project is a javascript web visualization and is meant to be published as a website. It has been build with modern technologies such as BackboneJs, React, Stylus, etc.
+The project is a javascript web visualization and is meant to be published as a website. It has been build with ~~modern~~ technologies such as BackboneJs, React, Stylus, etc.
 
 ### Tech
 Following technologies are used in the project:
